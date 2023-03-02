@@ -1,0 +1,987 @@
+{
+	"info": {
+		"_postman_id": "71048901-fb3c-47da-be5c-f7acebd90e2d",
+		"name": "Public API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2244684"
+	},
+	"item": [
+		{
+			"name": "Coins",
+			"item": [
+				{
+					"name": "Coins with global avg prices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ROOT}}/public/v1/coins?skip=0&limit=5&currency=EUR",
+							"host": [
+								"{{API_ROOT}}"
+							],
+							"path": [
+								"public",
+								"v1",
+								"coins"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "currency",
+									"value": "EUR"
+								}
+							]
+						},
+						"description": "Coin List with global average prices order with market cap."
+					},
+					"response": [
+						{
+							"name": "Coins with global avg prices",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.coinstats.app/public/v1/coins?skip=0&limit=10",
+									"protocol": "https",
+									"host": [
+										"api",
+										"coinstats",
+										"app"
+									],
+									"path": [
+										"public",
+										"v1",
+										"coins"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 13 Nov 2018 11:03:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"O/sf1frEs3tBnsA6RUNvYQ==\""
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "4790c040687f70ff-EVN"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"coins\": [\n        {\n            \"id\": \"bitcoin\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/f3738cc5df5f59afb57111d67d951170_1.png\",\n            \"name\": \"Bitcoin\",\n            \"symbol\": \"BTC\",\n            \"rank\": 1,\n            \"price\": 6362.74960614,\n            \"priceBtc\": 1,\n            \"volume\": 4514555849.85,\n            \"marketCap\": 110545616313,\n            \"availableSupply\": 17373875,\n            \"totalSupply\": 17373875,\n            \"priceChange1h\": 0.12,\n            \"priceChange1d\": -0.56,\n            \"priceChange1w\": -1.07,\n            \"websiteUrl\": \"https://bitcoin.org\",\n            \"redditUrl\": \"https://www.reddit.com/r/bitcoin\",\n            \"twitterUrl\": \"https://twitter.com/btc\",\n            \"exp\": [\n                \"https://blockchain.info/\",\n                \"https://live.blockcypher.com/btc/\",\n                \"https://blockchair.com/bitcoin/blocks\"\n            ]\n        },\n        {\n            \"id\": \"ethereum\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/e1259737fa19af705f0207d5b384c37e_1027.png\",\n            \"name\": \"Ethereum\",\n            \"symbol\": \"ETH\",\n            \"rank\": 2,\n            \"price\": 208.130215868,\n            \"priceBtc\": 0.03282527,\n            \"volume\": 1522373585.13,\n            \"marketCap\": 21473551841,\n            \"availableSupply\": 103173639,\n            \"totalSupply\": 103173639,\n            \"priceChange1h\": 0.04,\n            \"priceChange1d\": -1.44,\n            \"priceChange1w\": -1.89,\n            \"websiteUrl\": \"https://www.ethereum.org/\",\n            \"redditUrl\": \"https://www.reddit.com/r/ethereum\",\n            \"twitterUrl\": \"https://twitter.com/ethereum\",\n            \"exp\": [\n                \"https://etherscan.io/\",\n                \"https://ethplorer.io/\",\n                \"https://etherchain.org/\"\n            ]\n        },\n        {\n            \"id\": \"ripple\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/f4f2f3a21bc4692c79d66d0b12f15c61_xrp.png\",\n            \"name\": \"XRP\",\n            \"symbol\": \"XRP\",\n            \"rank\": 3,\n            \"price\": 0.5227380884,\n            \"priceBtc\": 0.00008244,\n            \"volume\": 688526769.189,\n            \"marketCap\": 21016950779,\n            \"availableSupply\": 40205508733,\n            \"totalSupply\": 99991792688,\n            \"priceChange1h\": 0.77,\n            \"priceChange1d\": 3.8,\n            \"priceChange1w\": -1.46,\n            \"websiteUrl\": \"https://ripple.com/\",\n            \"redditUrl\": \"https://www.reddit.com/r/ripple\",\n            \"twitterUrl\": \"https://twitter.com/Ripple\",\n            \"exp\": [\n                \"https://xrpcharts.ripple.com/#/graph/\",\n                \"https://bithomp.com/explorer/\"\n            ]\n        },\n        {\n            \"id\": \"bitcoin-cash\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/c67f501b1ca7d99d2eb0ee0748f214e2_1831.png\",\n            \"name\": \"Bitcoin Cash\",\n            \"symbol\": \"BCH\",\n            \"rank\": 4,\n            \"price\": 507.88337011,\n            \"priceBtc\": 0.08010085,\n            \"volume\": 782290538.744,\n            \"marketCap\": 8865535926,\n            \"availableSupply\": 17455850,\n            \"totalSupply\": 17455850,\n            \"priceChange1h\": -0.01,\n            \"priceChange1d\": -2.28,\n            \"priceChange1w\": -11.65,\n            \"websiteUrl\": \"https://www.bitcoincash.org/\",\n            \"redditUrl\": \"https://www.reddit.com/r/Bitcoincash\",\n            \"exp\": [\n                \"https://blockchair.com/bitcoin-cash/blocks\",\n                \"http://blockdozer.com/insight/\",\n                \"https://www.blocktrail.com/BCC\"\n            ]\n        },\n        {\n            \"id\": \"stellar\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/cba1b2396ce642bcdd704915dac52259_512.png\",\n            \"name\": \"Stellar\",\n            \"symbol\": \"XLM\",\n            \"rank\": 5,\n            \"price\": 0.2648749605,\n            \"priceBtc\": 0.00004177,\n            \"volume\": 77902228.6433,\n            \"marketCap\": 5015203600,\n            \"availableSupply\": 18934230666,\n            \"totalSupply\": 104463177385,\n            \"priceChange1h\": 0.02,\n            \"priceChange1d\": -2.75,\n            \"priceChange1w\": 4.54,\n            \"websiteUrl\": \"https://www.stellar.org\",\n            \"redditUrl\": \"https://www.reddit.com/r/stellar\",\n            \"twitterUrl\": \"https://twitter.com/StellarOrg\",\n            \"exp\": [\n                \"https://dashboard.stellar.org/\",\n                \"https://stellar.expert/explorer/public/\",\n                \"https://steexp.com/\"\n            ]\n        },\n        {\n            \"id\": \"eos\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/8185ae6eaeded75c4729f6393129d98c_1765.png\",\n            \"name\": \"EOS\",\n            \"symbol\": \"EOS\",\n            \"rank\": 6,\n            \"price\": 5.3374942604,\n            \"priceBtc\": 0.0008418,\n            \"volume\": 662034726.398,\n            \"marketCap\": 4837078114,\n            \"availableSupply\": 906245118,\n            \"totalSupply\": 1006245120,\n            \"priceChange1h\": 0.06,\n            \"priceChange1d\": -1.08,\n            \"priceChange1w\": -4.86,\n            \"websiteUrl\": \"https://eos.io/\",\n            \"redditUrl\": \"https://www.reddit.com/r/EOS\",\n            \"twitterUrl\": \"https://twitter.com/eos_io\",\n            \"exp\": [\n                \"https://bloks.io/\",\n                \"https://eosflare.io/\",\n                \"https://eospark.com/\"\n            ]\n        },\n        {\n            \"id\": \"litecoin\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/f829e3efd481575dd3423c265b34e9c8_2.png\",\n            \"name\": \"Litecoin\",\n            \"symbol\": \"LTC\",\n            \"rank\": 7,\n            \"price\": 50.4143886779,\n            \"priceBtc\": 0.00795037,\n            \"volume\": 435294369.83,\n            \"marketCap\": 2981435769,\n            \"availableSupply\": 59138588,\n            \"totalSupply\": 59138588,\n            \"priceChange1h\": -0.12,\n            \"priceChange1d\": -0.87,\n            \"priceChange1w\": -7.06,\n            \"websiteUrl\": \"https://litecoin.com\",\n            \"redditUrl\": \"https://www.reddit.com/r/litecoin\",\n            \"twitterUrl\": \"https://twitter.com/LitecoinProject\",\n            \"exp\": [\n                \"http://explorer.litecoin.net/chain/Litecoin\",\n                \"https://chainz.cryptoid.info/ltc/\",\n                \"https://live.blockcypher.com/ltc/\"\n            ]\n        },\n        {\n            \"id\": \"cardano\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/cce005b0cfc46447e5e7205bc8cf2e8b_2010.png\",\n            \"name\": \"Cardano\",\n            \"symbol\": \"ADA\",\n            \"rank\": 8,\n            \"price\": 0.0750106925,\n            \"priceBtc\": 0.00001183,\n            \"volume\": 17421528.9288,\n            \"marketCap\": 1944807516,\n            \"availableSupply\": 25927070538,\n            \"totalSupply\": 31112483745,\n            \"priceChange1h\": 0.02,\n            \"priceChange1d\": -0.73,\n            \"priceChange1w\": -4.41,\n            \"websiteUrl\": \"https://www.cardano.org\",\n            \"redditUrl\": \"https://www.reddit.com/r/cardano\",\n            \"twitterUrl\": \"https://twitter.com/cardano\",\n            \"exp\": [\n                \"https://cardanoexplorer.com/\"\n            ]\n        },\n        {\n            \"id\": \"monero\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/d2589698659f4bd3fc2b0826de37b411_328.png\",\n            \"name\": \"Monero\",\n            \"symbol\": \"XMR\",\n            \"rank\": 9,\n            \"price\": 104.697519052,\n            \"priceBtc\": 0.01651237,\n            \"volume\": 14570704.8708,\n            \"marketCap\": 1734427922,\n            \"availableSupply\": 16566084,\n            \"totalSupply\": 16566084,\n            \"priceChange1h\": -0.42,\n            \"priceChange1d\": -0.84,\n            \"priceChange1w\": -6.41,\n            \"websiteUrl\": \"http://www.monero.cc\",\n            \"redditUrl\": \"https://www.reddit.com/r/monero\",\n            \"twitterUrl\": \"https://twitter.com/monero\",\n            \"exp\": [\n                \"http://moneroblocks.info/\",\n                \"http://chainradar.com/xmr/blocks\"\n            ]\n        },\n        {\n            \"id\": \"tether\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/fb5b093c880038caddaadf99cf8f08d6_825.png\",\n            \"name\": \"Tether\",\n            \"symbol\": \"USDT\",\n            \"rank\": 10,\n            \"price\": 0.9860800679,\n            \"priceBtc\": 0.00015552,\n            \"volume\": 2604655079.83,\n            \"marketCap\": 1682668461,\n            \"availableSupply\": 1706421736,\n            \"totalSupply\": 2580109502,\n            \"priceChange1h\": -0.05,\n            \"priceChange1d\": -0.79,\n            \"priceChange1w\": -0.64,\n            \"websiteUrl\": \"https://tether.to\",\n            \"twitterUrl\": \"https://twitter.com/tether_to\",\n            \"exp\": [\n                \"https://www.omniexplorer.info/asset/31\"\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Coin with global avg prices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ROOT}}/public/v1/coins/bitcoin?currency=AMD",
+							"host": [
+								"{{API_ROOT}}"
+							],
+							"path": [
+								"public",
+								"v1",
+								"coins",
+								"bitcoin"
+							],
+							"query": [
+								{
+									"key": "currency",
+									"value": "AMD"
+								}
+							]
+						},
+						"description": "Coin with global average prices order with market cap."
+					},
+					"response": [
+						{
+							"name": "Coins with global avg prices",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.coinstats.app/public/v1/coins?skip=0&limit=10",
+									"protocol": "https",
+									"host": [
+										"api",
+										"coinstats",
+										"app"
+									],
+									"path": [
+										"public",
+										"v1",
+										"coins"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 13 Nov 2018 11:03:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"O/sf1frEs3tBnsA6RUNvYQ==\""
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "4790c040687f70ff-EVN"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"coins\": [\n        {\n            \"id\": \"bitcoin\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/f3738cc5df5f59afb57111d67d951170_1.png\",\n            \"name\": \"Bitcoin\",\n            \"symbol\": \"BTC\",\n            \"rank\": 1,\n            \"price\": 6362.74960614,\n            \"priceBtc\": 1,\n            \"volume\": 4514555849.85,\n            \"marketCap\": 110545616313,\n            \"availableSupply\": 17373875,\n            \"totalSupply\": 17373875,\n            \"priceChange1h\": 0.12,\n            \"priceChange1d\": -0.56,\n            \"priceChange1w\": -1.07,\n            \"websiteUrl\": \"https://bitcoin.org\",\n            \"redditUrl\": \"https://www.reddit.com/r/bitcoin\",\n            \"twitterUrl\": \"https://twitter.com/btc\",\n            \"exp\": [\n                \"https://blockchain.info/\",\n                \"https://live.blockcypher.com/btc/\",\n                \"https://blockchair.com/bitcoin/blocks\"\n            ]\n        },\n        {\n            \"id\": \"ethereum\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/e1259737fa19af705f0207d5b384c37e_1027.png\",\n            \"name\": \"Ethereum\",\n            \"symbol\": \"ETH\",\n            \"rank\": 2,\n            \"price\": 208.130215868,\n            \"priceBtc\": 0.03282527,\n            \"volume\": 1522373585.13,\n            \"marketCap\": 21473551841,\n            \"availableSupply\": 103173639,\n            \"totalSupply\": 103173639,\n            \"priceChange1h\": 0.04,\n            \"priceChange1d\": -1.44,\n            \"priceChange1w\": -1.89,\n            \"websiteUrl\": \"https://www.ethereum.org/\",\n            \"redditUrl\": \"https://www.reddit.com/r/ethereum\",\n            \"twitterUrl\": \"https://twitter.com/ethereum\",\n            \"exp\": [\n                \"https://etherscan.io/\",\n                \"https://ethplorer.io/\",\n                \"https://etherchain.org/\"\n            ]\n        },\n        {\n            \"id\": \"ripple\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/f4f2f3a21bc4692c79d66d0b12f15c61_xrp.png\",\n            \"name\": \"XRP\",\n            \"symbol\": \"XRP\",\n            \"rank\": 3,\n            \"price\": 0.5227380884,\n            \"priceBtc\": 0.00008244,\n            \"volume\": 688526769.189,\n            \"marketCap\": 21016950779,\n            \"availableSupply\": 40205508733,\n            \"totalSupply\": 99991792688,\n            \"priceChange1h\": 0.77,\n            \"priceChange1d\": 3.8,\n            \"priceChange1w\": -1.46,\n            \"websiteUrl\": \"https://ripple.com/\",\n            \"redditUrl\": \"https://www.reddit.com/r/ripple\",\n            \"twitterUrl\": \"https://twitter.com/Ripple\",\n            \"exp\": [\n                \"https://xrpcharts.ripple.com/#/graph/\",\n                \"https://bithomp.com/explorer/\"\n            ]\n        },\n        {\n            \"id\": \"bitcoin-cash\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/c67f501b1ca7d99d2eb0ee0748f214e2_1831.png\",\n            \"name\": \"Bitcoin Cash\",\n            \"symbol\": \"BCH\",\n            \"rank\": 4,\n            \"price\": 507.88337011,\n            \"priceBtc\": 0.08010085,\n            \"volume\": 782290538.744,\n            \"marketCap\": 8865535926,\n            \"availableSupply\": 17455850,\n            \"totalSupply\": 17455850,\n            \"priceChange1h\": -0.01,\n            \"priceChange1d\": -2.28,\n            \"priceChange1w\": -11.65,\n            \"websiteUrl\": \"https://www.bitcoincash.org/\",\n            \"redditUrl\": \"https://www.reddit.com/r/Bitcoincash\",\n            \"exp\": [\n                \"https://blockchair.com/bitcoin-cash/blocks\",\n                \"http://blockdozer.com/insight/\",\n                \"https://www.blocktrail.com/BCC\"\n            ]\n        },\n        {\n            \"id\": \"stellar\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/cba1b2396ce642bcdd704915dac52259_512.png\",\n            \"name\": \"Stellar\",\n            \"symbol\": \"XLM\",\n            \"rank\": 5,\n            \"price\": 0.2648749605,\n            \"priceBtc\": 0.00004177,\n            \"volume\": 77902228.6433,\n            \"marketCap\": 5015203600,\n            \"availableSupply\": 18934230666,\n            \"totalSupply\": 104463177385,\n            \"priceChange1h\": 0.02,\n            \"priceChange1d\": -2.75,\n            \"priceChange1w\": 4.54,\n            \"websiteUrl\": \"https://www.stellar.org\",\n            \"redditUrl\": \"https://www.reddit.com/r/stellar\",\n            \"twitterUrl\": \"https://twitter.com/StellarOrg\",\n            \"exp\": [\n                \"https://dashboard.stellar.org/\",\n                \"https://stellar.expert/explorer/public/\",\n                \"https://steexp.com/\"\n            ]\n        },\n        {\n            \"id\": \"eos\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/8185ae6eaeded75c4729f6393129d98c_1765.png\",\n            \"name\": \"EOS\",\n            \"symbol\": \"EOS\",\n            \"rank\": 6,\n            \"price\": 5.3374942604,\n            \"priceBtc\": 0.0008418,\n            \"volume\": 662034726.398,\n            \"marketCap\": 4837078114,\n            \"availableSupply\": 906245118,\n            \"totalSupply\": 1006245120,\n            \"priceChange1h\": 0.06,\n            \"priceChange1d\": -1.08,\n            \"priceChange1w\": -4.86,\n            \"websiteUrl\": \"https://eos.io/\",\n            \"redditUrl\": \"https://www.reddit.com/r/EOS\",\n            \"twitterUrl\": \"https://twitter.com/eos_io\",\n            \"exp\": [\n                \"https://bloks.io/\",\n                \"https://eosflare.io/\",\n                \"https://eospark.com/\"\n            ]\n        },\n        {\n            \"id\": \"litecoin\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/f829e3efd481575dd3423c265b34e9c8_2.png\",\n            \"name\": \"Litecoin\",\n            \"symbol\": \"LTC\",\n            \"rank\": 7,\n            \"price\": 50.4143886779,\n            \"priceBtc\": 0.00795037,\n            \"volume\": 435294369.83,\n            \"marketCap\": 2981435769,\n            \"availableSupply\": 59138588,\n            \"totalSupply\": 59138588,\n            \"priceChange1h\": -0.12,\n            \"priceChange1d\": -0.87,\n            \"priceChange1w\": -7.06,\n            \"websiteUrl\": \"https://litecoin.com\",\n            \"redditUrl\": \"https://www.reddit.com/r/litecoin\",\n            \"twitterUrl\": \"https://twitter.com/LitecoinProject\",\n            \"exp\": [\n                \"http://explorer.litecoin.net/chain/Litecoin\",\n                \"https://chainz.cryptoid.info/ltc/\",\n                \"https://live.blockcypher.com/ltc/\"\n            ]\n        },\n        {\n            \"id\": \"cardano\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/cce005b0cfc46447e5e7205bc8cf2e8b_2010.png\",\n            \"name\": \"Cardano\",\n            \"symbol\": \"ADA\",\n            \"rank\": 8,\n            \"price\": 0.0750106925,\n            \"priceBtc\": 0.00001183,\n            \"volume\": 17421528.9288,\n            \"marketCap\": 1944807516,\n            \"availableSupply\": 25927070538,\n            \"totalSupply\": 31112483745,\n            \"priceChange1h\": 0.02,\n            \"priceChange1d\": -0.73,\n            \"priceChange1w\": -4.41,\n            \"websiteUrl\": \"https://www.cardano.org\",\n            \"redditUrl\": \"https://www.reddit.com/r/cardano\",\n            \"twitterUrl\": \"https://twitter.com/cardano\",\n            \"exp\": [\n                \"https://cardanoexplorer.com/\"\n            ]\n        },\n        {\n            \"id\": \"monero\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/d2589698659f4bd3fc2b0826de37b411_328.png\",\n            \"name\": \"Monero\",\n            \"symbol\": \"XMR\",\n            \"rank\": 9,\n            \"price\": 104.697519052,\n            \"priceBtc\": 0.01651237,\n            \"volume\": 14570704.8708,\n            \"marketCap\": 1734427922,\n            \"availableSupply\": 16566084,\n            \"totalSupply\": 16566084,\n            \"priceChange1h\": -0.42,\n            \"priceChange1d\": -0.84,\n            \"priceChange1w\": -6.41,\n            \"websiteUrl\": \"http://www.monero.cc\",\n            \"redditUrl\": \"https://www.reddit.com/r/monero\",\n            \"twitterUrl\": \"https://twitter.com/monero\",\n            \"exp\": [\n                \"http://moneroblocks.info/\",\n                \"http://chainradar.com/xmr/blocks\"\n            ]\n        },\n        {\n            \"id\": \"tether\",\n            \"icon\": \"https://api.coin-stats.com/api/files/812fde17aea65fbb9f1fd8a478547bde/fb5b093c880038caddaadf99cf8f08d6_825.png\",\n            \"name\": \"Tether\",\n            \"symbol\": \"USDT\",\n            \"rank\": 10,\n            \"price\": 0.9860800679,\n            \"priceBtc\": 0.00015552,\n            \"volume\": 2604655079.83,\n            \"marketCap\": 1682668461,\n            \"availableSupply\": 1706421736,\n            \"totalSupply\": 2580109502,\n            \"priceChange1h\": -0.05,\n            \"priceChange1d\": -0.79,\n            \"priceChange1w\": -0.64,\n            \"websiteUrl\": \"https://tether.to\",\n            \"twitterUrl\": \"https://twitter.com/tether_to\",\n            \"exp\": [\n                \"https://www.omniexplorer.info/asset/31\"\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Historical global avg price chart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ROOT}}/public/v1/charts?period=1m&coinId=ethereum",
+							"host": [
+								"{{API_ROOT}}"
+							],
+							"path": [
+								"public",
+								"v1",
+								"charts"
+							],
+							"query": [
+								{
+									"key": "period",
+									"value": "1m",
+									"description": "available periods - 24h | 1w | 1m | 3m | 6m | 1y |all"
+								},
+								{
+									"key": "coinId",
+									"value": "ethereum"
+								}
+							]
+						},
+						"description": "Get coins chart"
+					},
+					"response": [
+						{
+							"name": "Historical global avg price chart",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.coinstats.app/public/v1/charts?period=1m&coinId=ethereum",
+									"protocol": "https",
+									"host": [
+										"api",
+										"coinstats",
+										"app"
+									],
+									"path": [
+										"public",
+										"v1",
+										"charts"
+									],
+									"query": [
+										{
+											"key": "period",
+											"value": "1m"
+										},
+										{
+											"key": "coinId",
+											"value": "ethereum"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 13 Nov 2018 11:20:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"pahglVLjmqHilrQXlx7m0w==\""
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "4790d9cdfbf470f3-EVN"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"chart\": [\n        [\n            1539507300,\n            200.94573956,\n            0.03202943,\n            1\n        ],\n        [\n            1539593700,\n            210.76864529,\n            0.03168714,\n            1\n        ],\n        [\n            1539680100,\n            209.74244882,\n            0.03184456,\n            1\n        ],\n        [\n            1539766500,\n            209.40449177,\n            0.03196842,\n            1\n        ],\n        [\n            1539852900,\n            206.5674436,\n            0.03174293,\n            1\n        ],\n        [\n            1539939300,\n            202.92163916,\n            0.03145229,\n            1\n        ],\n        [\n            1540025700,\n            205.54253217,\n            0.0319021,\n            1\n        ],\n        [\n            1540112100,\n            206.7808671,\n            0.03196189,\n            1\n        ],\n        [\n            1540198500,\n            204.10912762,\n            0.03168181,\n            1\n        ],\n        [\n            1540284900,\n            203.76508027,\n            0.03163123,\n            1\n        ],\n        [\n            1540371300,\n            204.62262488,\n            0.03157571,\n            1\n        ],\n        [\n            1540457700,\n            202.99669859,\n            0.03136966,\n            1\n        ],\n        [\n            1540544100,\n            203.77931872,\n            0.03152597,\n            1\n        ],\n        [\n            1540630500,\n            204.02930361,\n            0.03162146,\n            1\n        ],\n        [\n            1540716900,\n            204.24400883,\n            0.03155278,\n            1\n        ],\n        [\n            1540803300,\n            204.13879861,\n            0.031734,\n            1\n        ],\n        [\n            1540889700,\n            197.48384326,\n            0.03126466,\n            1\n        ],\n        [\n            1540976100,\n            197.30103489,\n            0.03138109,\n            1\n        ],\n        [\n            1541062500,\n            199.36328744,\n            0.03151735,\n            1\n        ],\n        [\n            1541148900,\n            199.05493304,\n            0.0314686,\n            1\n        ],\n        [\n            1541235300,\n            200.37235121,\n            0.03142505,\n            1\n        ],\n        [\n            1541324700,\n            200.75792747,\n            0.03152465,\n            1\n        ],\n        [\n            1541408100,\n            208.8815608,\n            0.03237667,\n            1\n        ],\n        [\n            1541494500,\n            212.19046585,\n            0.03288148,\n            1\n        ],\n        [\n            1541580900,\n            220.38510575,\n            0.03372908,\n            1\n        ],\n        [\n            1541667300,\n            214.65489798,\n            0.03307554,\n            1\n        ],\n        [\n            1541753700,\n            212.58650405,\n            0.03294458,\n            1\n        ],\n        [\n            1541840100,\n            211.43444173,\n            0.03294584,\n            1\n        ],\n        [\n            1541926500,\n            211.98024969,\n            0.03321165,\n            1\n        ],\n        [\n            1542012900,\n            211.3111982,\n            0.03289473,\n            1\n        ],\n        [\n            1542099300,\n            208.41621557,\n            0.0328601,\n            1\n        ]\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Exchange Tickers",
+			"item": [
+				{
+					"name": "Get Exchanges",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ROOT}}/public/v1/exchanges",
+							"host": [
+								"{{API_ROOT}}"
+							],
+							"path": [
+								"public",
+								"v1",
+								"exchanges"
+							]
+						},
+						"description": "Returns list of supported exchanges"
+					},
+					"response": [
+						{
+							"name": "Get Exchanges",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.coinstats.app/public/v1/exchanges",
+									"protocol": "https",
+									"host": [
+										"api",
+										"coinstats",
+										"app"
+									],
+									"path": [
+										"public",
+										"v1",
+										"exchanges"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 13 Nov 2018 11:20:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"+I7+1YnjqAGne47AVj1D5g==\""
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "4790d9f5cadc70f3-EVN"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"supportedExchanges\": [\n        \"Bittrex\",\n        \"Poloniex\",\n        \"Coincheck\",\n        \"Kraken\",\n        \"Bitfinex\",\n        \"CEX.IO\",\n        \"Quoine\",\n        \"Bitso\",\n        \"Qryptos\",\n        \"LocalBitcoins\",\n        \"LakeBTC\",\n        \"Vaultoro\",\n        \"Kucoin\",\n        \"TuxExchange\",\n        \"Getecoin\",\n        \"Luno\",\n        \"Exmo\",\n        \"Cryptopia\",\n        \"Bleutrade\",\n        \"Gate.io\",\n        \"CCEX\",\n        \"TheRockTrading\",\n        \"Liqui\",\n        \"Exx\",\n        \"HitBTC\",\n        \"Binance\",\n        \"Gemini\",\n        \"Paymium\",\n        \"GDAX\",\n        \"Livecoin\",\n        \"Remitano\",\n        \"EthexIndia\",\n        \"CCEDK\",\n        \"Bit2C\",\n        \"BTER\",\n        \"BitMarket\",\n        \"ViaBTC\",\n        \"Lykke\",\n        \"TrustDEX\",\n        \"BitBay\",\n        \"BTCMarkets\",\n        \"Novaexchange\",\n        \"Coinbase\",\n        \"WavesDEX\",\n        \"Coinfloor\",\n        \"BTCE\",\n        \"bitFlyer\",\n        \"Unocoin\",\n        \"Zaif\",\n        \"Yacuna\",\n        \"Coinroom\",\n        \"Jubi\",\n        \"EtherDelta\",\n        \"BTCXIndia\",\n        \"Abucoins\",\n        \"OKCoin\",\n        \"itBit\",\n        \"Yunbi\",\n        \"CryptoX\",\n        \"MercadoBitcoin\",\n        \"Korbit\",\n        \"CHBTC\",\n        \"BTC38\",\n        \"Bithumb\",\n        \"Acx\",\n        \"Braziliex\",\n        \"Btcturk\",\n        \"Wex\",\n        \"Coingi\",\n        \"Coinexchange\",\n        \"Therock\",\n        \"Bitstamp\",\n        \"Coinone\",\n        \"ForkDelta\",\n        \"TradeSatoshi\",\n        \"Yobit\",\n        \"QuadrigaCX\",\n        \"CoinSquare\",\n        \"BX.in.th\",\n        \"IDEX\",\n        \"Tidex\",\n        \"Switcheo\",\n        \"Crex24\",\n        \"Hadax\",\n        \"HuobiPro\",\n        \"Cobinhood\",\n        \"BitZ\",\n        \"LBank\",\n        \"BCEX\",\n        \"Mercatox\",\n        \"Simex\",\n        \"TradeOgre\",\n        \"BigOne\",\n        \"Nanex\",\n        \"Indodax\",\n        \"StocksExchange\",\n        \"LiteBit\",\n        \"StellarTerm\",\n        \"CoinBene\",\n        \"CoinEx\",\n        \"UpHold\",\n        \"CoinSpot\",\n        \"FCoin\",\n        \"CryptoBridge\",\n        \"Exrates\",\n        \"CryptoMKT\",\n        \"Latoken\",\n        \"Bancor\",\n        \"BitMEX\",\n        \"BitForex\",\n        \"Upbit\",\n        \"CoinTiger\",\n        \"Idax\",\n        \"OKEX\",\n        \"Bibox\",\n        \"BitMart\",\n        \"RightBTC\",\n        \"BitMax\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Markets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ROOT}}/public/v1/markets?coinId=bitcoin",
+							"host": [
+								"{{API_ROOT}}"
+							],
+							"path": [
+								"public",
+								"v1",
+								"markets"
+							],
+							"query": [
+								{
+									"key": "coinId",
+									"value": "bitcoin"
+								}
+							]
+						},
+						"description": "Returns market prices across all exchanges specified coin is trading in"
+					},
+					"response": [
+						{
+							"name": "Get Markets",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.coinstats.app/public/v1/markets?coinId=bitcoin",
+									"protocol": "https",
+									"host": [
+										"api",
+										"coinstats",
+										"app"
+									],
+									"path": [
+										"public",
+										"v1",
+										"markets"
+									],
+									"query": [
+										{
+											"key": "coinId",
+											"value": "bitcoin"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 13 Nov 2018 11:20:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"QcL5ZjjuwxMd6trTyeGdQg==\""
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "4790da230cf170f3-EVN"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"price\": 6294.5,\n        \"exchange\": \"BitMEX\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 1276923535\n    },\n    {\n        \"price\": 6456.558,\n        \"link\": \"https://www.okex.com/\",\n        \"exchange\": \"OKEX\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 127387889.34\n    },\n    {\n        \"price\": 6284.055958367208,\n        \"link\": \"https://quoine.com\",\n        \"exchange\": \"Quoine\",\n        \"pair\": \"BTC/JPY\",\n        \"volume\": 114991618.62257797\n    },\n    {\n        \"price\": 6456.08,\n        \"exchange\": \"BitForex\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 104843479.525208\n    },\n    {\n        \"price\": 6459.62,\n        \"link\": \"https://hitbtc.com/\",\n        \"exchange\": \"HitBTC\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 89042352.9138\n    },\n    {\n        \"price\": 6379.45690948,\n        \"exchange\": \"Simex\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 88525601.4301857\n    },\n    {\n        \"price\": 6451.5,\n        \"exchange\": \"Idax\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 85563837.05826001\n    },\n    {\n        \"price\": 6461.28,\n        \"link\": \"https://www.binance.com/?ref=10951886\",\n        \"exchange\": \"Binance\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 67791301.806959\n    },\n    {\n        \"price\": 6454.84,\n        \"link\": \"www.huobipro.com\",\n        \"exchange\": \"HuobiPro\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 62265480.01701162\n    },\n    {\n        \"price\": 6453.9,\n        \"link\": \"https://www.bitfinex.com\",\n        \"exchange\": \"Bitfinex\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 55789791.678711146\n    },\n    {\n        \"price\": 6457.26,\n        \"exchange\": \"FCoin\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 52694581.23950853\n    },\n    {\n        \"price\": 6356.26728737681,\n        \"exchange\": \"BCEX\",\n        \"pair\": \"BTC/CKUSD\",\n        \"volume\": 40858995.069480225\n    },\n    {\n        \"price\": 6461.79,\n        \"exchange\": \"BitMart\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 39180417.47\n    },\n    {\n        \"price\": 6451.908396946565,\n        \"exchange\": \"Idax\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 30769776.464\n    },\n    {\n        \"price\": 6290,\n        \"link\": \"https://www.gdax.com/\",\n        \"exchange\": \"GDAX\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 27346626.098830696\n    },\n    {\n        \"price\": 6292.38,\n        \"exchange\": \"Bitstamp\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 24855945.645888813\n    },\n    {\n        \"price\": 6460.28,\n        \"exchange\": \"LBank\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 24260094.38354397\n    },\n    {\n        \"price\": 6462.960702953381,\n        \"exchange\": \"LBank\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 23699299.08326399\n    },\n    {\n        \"price\": 6458.549380833282,\n        \"link\": \"https://www.binance.com/?ref=10951886\",\n        \"exchange\": \"Binance\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 23582075.53625\n    },\n    {\n        \"price\": 6294.165435135453,\n        \"link\": \"https://bitflyer.jp/en/\",\n        \"exchange\": \"bitFlyer\",\n        \"pair\": \"BTC/JPY\",\n        \"volume\": 20338348.543511763\n    },\n    {\n        \"price\": 6460.118574808404,\n        \"exchange\": \"BitForex\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 19087028.629248\n    },\n    {\n        \"price\": 6460.479704887134,\n        \"link\": \"https://www.okex.com/\",\n        \"exchange\": \"OKEX\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 18915192.234899998\n    },\n    {\n        \"price\": 6450.64,\n        \"exchange\": \"CoinTiger\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 17406820.646738\n    },\n    {\n        \"price\": 6454.6,\n        \"exchange\": \"BCEX\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 16979670.8526\n    },\n    {\n        \"price\": 6310.2948888,\n        \"link\": \"https://www.kraken.com\",\n        \"exchange\": \"Kraken\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 14993977.646197053\n    },\n    {\n        \"price\": 6290.6,\n        \"link\": \"https://www.kraken.com\",\n        \"exchange\": \"Kraken\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 14543399.33190705\n    },\n    {\n        \"price\": 6428.844415595445,\n        \"exchange\": \"BitZ\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 14174272.8225\n    },\n    {\n        \"price\": 6454.013173944864,\n        \"link\": \"www.huobipro.com\",\n        \"exchange\": \"HuobiPro\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 13919031.83334385\n    },\n    {\n        \"price\": 6452.5842,\n        \"exchange\": \"Latoken\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 13826058.69490353\n    },\n    {\n        \"price\": 6293.13,\n        \"link\": \"\",\n        \"exchange\": \"itBit\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 13462739.106837\n    },\n    {\n        \"price\": 6407.34071985702,\n        \"exchange\": \"Simex\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 12906998.640413212\n    },\n    {\n        \"price\": 6455,\n        \"exchange\": \"BitZ\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 12833245.44\n    },\n    {\n        \"price\": 6495.9872489027,\n        \"exchange\": \"Latoken\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 12091866.341629578\n    },\n    {\n        \"price\": 6298.774414143309,\n        \"link\": \"https://coincheck.com\",\n        \"exchange\": \"Coincheck\",\n        \"pair\": \"BTC/JPY\",\n        \"volume\": 11362609.860296138\n    },\n    {\n        \"price\": 7194.146571045165,\n        \"link\": \"https://www.qryptos.com\",\n        \"exchange\": \"Qryptos\",\n        \"pair\": \"BTC/JPY\",\n        \"volume\": 11270591.585986694\n    },\n    {\n        \"price\": 6431.1,\n        \"link\": \"https://www.livecoin.net/\",\n        \"exchange\": \"Livecoin\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 10965147.829168651\n    },\n    {\n        \"price\": 6341.829070344335,\n        \"exchange\": \"CoinTiger\",\n        \"pair\": \"BTC/BITCNY\",\n        \"volume\": 10314272.55884563\n    },\n    {\n        \"price\": 6460.717009916095,\n        \"exchange\": \"BitMart\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 9949563.61245\n    },\n    {\n        \"price\": 6391.060184157185,\n        \"link\": \"https://www.bithumb.com/\",\n        \"exchange\": \"Bithumb\",\n        \"pair\": \"BTC/KRW\",\n        \"volume\": 9052301.669482566\n    },\n    {\n        \"price\": 7011.54,\n        \"link\": \"https://www.lakebtc.com\",\n        \"exchange\": \"LakeBTC\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 7458435.808091819\n    },\n    {\n        \"price\": 6288.93,\n        \"link\": \"https://gemini.com/\",\n        \"exchange\": \"Gemini\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 7392643.751387909\n    },\n    {\n        \"price\": 6456.198145436798,\n        \"exchange\": \"FCoin\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 6440331.0247059995\n    },\n    {\n        \"price\": 6460.3,\n        \"exchange\": \"BitMax\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 6287623.128535826\n    },\n    {\n        \"price\": 6595.850217392298,\n        \"link\": \"https://yobit.net/\",\n        \"exchange\": \"Yobit\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 6281940.7759747105\n    },\n    {\n        \"price\": 6357.670642789591,\n        \"exchange\": \"CoinBene\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 6279728.29680638\n    },\n    {\n        \"price\": 6486.60000007,\n        \"link\": \"https://exmo.com\",\n        \"exchange\": \"Exmo\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 6255805.448476779\n    },\n    {\n        \"price\": 6234.607963051045,\n        \"link\": \"https://zaif.jp/\",\n        \"exchange\": \"Zaif\",\n        \"pair\": \"BTC/JPY\",\n        \"volume\": 6125158.392268974\n    },\n    {\n        \"price\": 6459.38098896656,\n        \"exchange\": \"CoinEx\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 5932649.304019643\n    },\n    {\n        \"price\": 6448.545081710953,\n        \"exchange\": \"CoinTiger\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 5504749.580286\n    },\n    {\n        \"price\": 6444.0937222821985,\n        \"link\": \"https://exmo.com\",\n        \"exchange\": \"Exmo\",\n        \"pair\": \"BTC/RUB\",\n        \"volume\": 5501843.674757429\n    },\n    {\n        \"price\": 6459.955421208512,\n        \"link\": \"https://hitbtc.com/\",\n        \"exchange\": \"HitBTC\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 5488910.51313\n    },\n    {\n        \"price\": 6509.04971,\n        \"exchange\": \"Exrates\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 5347445.940361141\n    },\n    {\n        \"price\": 6312.885508430877,\n        \"link\": \"https://bitbay.net\",\n        \"exchange\": \"BitBay\",\n        \"pair\": \"BTC/PLN\",\n        \"volume\": 5256938.520537128\n    },\n    {\n        \"price\": 6456.23,\n        \"exchange\": \"BigOne\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 4948786.421108199\n    },\n    {\n        \"price\": 6344.783527042225,\n        \"exchange\": \"CoinEx\",\n        \"pair\": \"BTC/BCH\",\n        \"volume\": 4746585.217458741\n    },\n    {\n        \"price\": 6476.225843946351,\n        \"link\": \"https://www.bibox.com/\",\n        \"exchange\": \"Bibox\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 4566500.04\n    },\n    {\n        \"price\": 6405.051401410008,\n        \"exchange\": \"Exrates\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 4369403.544786756\n    },\n    {\n        \"price\": 6303.63189336,\n        \"exchange\": \"Bitstamp\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 4131580.852828534\n    },\n    {\n        \"price\": 6456.57,\n        \"exchange\": \"CoinEx\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 4046064.3943826854\n    },\n    {\n        \"price\": 6309.047683919999,\n        \"link\": \"https://www.gdax.com/\",\n        \"exchange\": \"GDAX\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 4011605.741843432\n    },\n    {\n        \"price\": 6450.490954729209,\n        \"link\": \"https://www.bitfinex.com\",\n        \"exchange\": \"Bitfinex\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 3821580.031803428\n    },\n    {\n        \"price\": 6487.14345447,\n        \"exchange\": \"Simex\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 3785900.92268739\n    },\n    {\n        \"price\": 6453.2601,\n        \"link\": \"https://www.bibox.com/\",\n        \"exchange\": \"Bibox\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 3749344.1181\n    },\n    {\n        \"price\": 6461.176757961589,\n        \"link\": \"https://www.bitfinex.com\",\n        \"exchange\": \"Bitfinex\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 3716576.6901932643\n    },\n    {\n        \"price\": 6392.823478455477,\n        \"exchange\": \"Coinone\",\n        \"pair\": \"BTC/KRW\",\n        \"volume\": 3583780.402928313\n    },\n    {\n        \"price\": 6336.1,\n        \"link\": \"https://cex.io\",\n        \"exchange\": \"CEX.IO\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 3090793.9590581763\n    },\n    {\n        \"price\": 6296.233,\n        \"link\": \"https://quoine.com\",\n        \"exchange\": \"Quoine\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 2889944.802144317\n    },\n    {\n        \"price\": 6385.7703012623115,\n        \"link\": \"https://www.korbit.co.kr\",\n        \"exchange\": \"Korbit\",\n        \"pair\": \"BTC/KRW\",\n        \"volume\": 2871766.5470020184\n    },\n    {\n        \"price\": 6423.275914634146,\n        \"link\": \"https://www.livecoin.net/\",\n        \"exchange\": \"Livecoin\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 2604389.4142471263\n    },\n    {\n        \"price\": 6328.9467816,\n        \"link\": \"https://cex.io\",\n        \"exchange\": \"CEX.IO\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 2581784.81831896\n    },\n    {\n        \"price\": 6478.701255839999,\n        \"link\": \"https://exmo.com\",\n        \"exchange\": \"Exmo\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 2406288.858658527\n    },\n    {\n        \"price\": 6457.310191257664,\n        \"exchange\": \"BitMax\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 2374621.1437399997\n    },\n    {\n        \"price\": 6423.716221458944,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/RUB\",\n        \"volume\": 2222882.709738956\n    },\n    {\n        \"price\": 6464.60629314,\n        \"link\": \"https://poloniex.com\",\n        \"exchange\": \"Poloniex\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 2184813.94555537\n    },\n    {\n        \"price\": 6331.558465934934,\n        \"link\": \"https://www.gdax.com/\",\n        \"exchange\": \"GDAX\",\n        \"pair\": \"BTC/GBP\",\n        \"volume\": 2029649.986598972\n    },\n    {\n        \"price\": 6345.4793249904,\n        \"link\": \"\",\n        \"exchange\": \"Coinroom\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 1881680.0517226674\n    },\n    {\n        \"price\": 6311.939228919546,\n        \"link\": \"\",\n        \"exchange\": \"Coinroom\",\n        \"pair\": \"BTC/PLN\",\n        \"volume\": 1842631.9146403163\n    },\n    {\n        \"price\": 6636.423798396207,\n        \"link\": \"https://www.luno.com/\",\n        \"exchange\": \"Luno\",\n        \"pair\": \"BTC/ZAR\",\n        \"volume\": 1709228.9406218603\n    },\n    {\n        \"price\": 6311.848594327772,\n        \"link\": \"\",\n        \"exchange\": \"Coinroom\",\n        \"pair\": \"BTC/GBP\",\n        \"volume\": 1639343.9504330333\n    },\n    {\n        \"price\": 6308.2513,\n        \"link\": \"\",\n        \"exchange\": \"Coinroom\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 1587217.0240808888\n    },\n    {\n        \"price\": 6473,\n        \"link\": \"https://bittrex.com\",\n        \"exchange\": \"Bittrex\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 1507407.93280378\n    },\n    {\n        \"price\": 6452.98,\n        \"link\": \"https://gate.io\",\n        \"exchange\": \"Gate.io\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 1491341.92884678\n    },\n    {\n        \"price\": 6300.2443494196705,\n        \"link\": \"https://www.kraken.com\",\n        \"exchange\": \"Kraken\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 1429540.7606247084\n    },\n    {\n        \"price\": 6470.816255494507,\n        \"link\": \"https://poloniex.com\",\n        \"exchange\": \"Poloniex\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 1403806.6818269466\n    },\n    {\n        \"price\": 6340.801143010524,\n        \"link\": \"https://poloniex.com\",\n        \"exchange\": \"Poloniex\",\n        \"pair\": \"BTC/USDC\",\n        \"volume\": 1371433.4166674153\n    },\n    {\n        \"price\": 6459.191456903127,\n        \"exchange\": \"BCEX\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 1325862.40802\n    },\n    {\n        \"price\": 6315.10308348952,\n        \"exchange\": \"Mercatox\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 1295060.458797448\n    },\n    {\n        \"price\": 6290.247260598097,\n        \"link\": \"https://www.coinfloor.co.uk/\",\n        \"exchange\": \"Coinfloor\",\n        \"pair\": \"BTC/GBP\",\n        \"volume\": 1253173.4229277468\n    },\n    {\n        \"price\": 6517.552376241856,\n        \"link\": \"https://exmo.com\",\n        \"exchange\": \"Exmo\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 1138707.865353988\n    },\n    {\n        \"price\": 6346.2125715308275,\n        \"link\": \"\",\n        \"exchange\": \"Btcturk\",\n        \"pair\": \"BTC/TRY\",\n        \"volume\": 1069527.2046800903\n    },\n    {\n        \"price\": 6296.48,\n        \"link\": \"https://bittrex.com\",\n        \"exchange\": \"Bittrex\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 1052195.36097931\n    },\n    {\n        \"price\": 6407.91113707644,\n        \"exchange\": \"CoinSquare\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 1051700.4063346956\n    },\n    {\n        \"price\": 6456.3981068685525,\n        \"link\": \"https://www.kucoin.com\",\n        \"exchange\": \"Kucoin\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 1049708.9896152408\n    },\n    {\n        \"price\": 6444.3,\n        \"exchange\": \"Cobinhood\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 1019911.465554431\n    },\n    {\n        \"price\": 6367.15091738794,\n        \"link\": \"https://hitbtc.com/\",\n        \"exchange\": \"HitBTC\",\n        \"pair\": \"BTC/DAI\",\n        \"volume\": 1014656.9203812067\n    },\n    {\n        \"price\": 6450.9057706725835,\n        \"link\": \"https://www.bitfinex.com\",\n        \"exchange\": \"Bitfinex\",\n        \"pair\": \"BTC/JPY\",\n        \"volume\": 993431.9088047885\n    },\n    {\n        \"price\": 6572.419888270614,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/CNY\",\n        \"volume\": 961018.9720488222\n    },\n    {\n        \"price\": 6301.207614442531,\n        \"exchange\": \"Bitstamp\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 940645.3490790153\n    },\n    {\n        \"price\": 6358.369209648372,\n        \"link\": \"https://www.bibox.com/\",\n        \"exchange\": \"Bibox\",\n        \"pair\": \"BTC/GUSD\",\n        \"volume\": 883813.3201411237\n    },\n    {\n        \"price\": 6296.661842002135,\n        \"link\": \"www.acx.com/\",\n        \"exchange\": \"Acx\",\n        \"pair\": \"BTC/AUD\",\n        \"volume\": 830911.9043338912\n    },\n    {\n        \"price\": 6349.832010076913,\n        \"exchange\": \"Indodax\",\n        \"pair\": \"BTC/IDR\",\n        \"volume\": 765243.0427629444\n    },\n    {\n        \"price\": 8677.44,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 734743.3961413152\n    },\n    {\n        \"price\": 6857.1005232718,\n        \"link\": \"https://www.lakebtc.com\",\n        \"exchange\": \"LakeBTC\",\n        \"pair\": \"BTC/JPY\",\n        \"volume\": 726890.0335217632\n    },\n    {\n        \"price\": 6326.6802885500665,\n        \"link\": \"https://bx.in.th/\",\n        \"exchange\": \"BX.in.th\",\n        \"pair\": \"BTC/THB\",\n        \"volume\": 720903.0581641662\n    },\n    {\n        \"price\": 6458.497687493254,\n        \"link\": \"https://liqui.io/\",\n        \"exchange\": \"Liqui\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 706363.255964701\n    },\n    {\n        \"price\": 6297.313797313798,\n        \"link\": \"https://www.gdax.com/\",\n        \"exchange\": \"GDAX\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 698619.086344885\n    },\n    {\n        \"price\": 6320.786045904058,\n        \"link\": \"https://www.btcmarkets.net/\",\n        \"exchange\": \"BTCMarkets\",\n        \"pair\": \"BTC/AUD\",\n        \"volume\": 596056.8803164599\n    },\n    {\n        \"price\": 6718.7488689599995,\n        \"link\": \"https://www.lakebtc.com\",\n        \"exchange\": \"LakeBTC\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 580470.9780642631\n    },\n    {\n        \"price\": 284163.3632113155,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/CRC\",\n        \"volume\": 568090.3394456764\n    },\n    {\n        \"price\": 6460.56,\n        \"exchange\": \"RightBTC\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 563474.2794336\n    },\n    {\n        \"price\": 6396.119507974493,\n        \"link\": \"\",\n        \"exchange\": \"MercadoBitcoin\",\n        \"pair\": \"BTC/BRL\",\n        \"volume\": 552798.214359773\n    },\n    {\n        \"price\": 6457.057492,\n        \"link\": \"https://www.kucoin.com\",\n        \"exchange\": \"Kucoin\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 547217.46450358\n    },\n    {\n        \"price\": 6194.744942730994,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/GBP\",\n        \"volume\": 546210.0132404235\n    },\n    {\n        \"price\": 6262.390854136683,\n        \"link\": \"https://bitso.com\",\n        \"exchange\": \"Bitso\",\n        \"pair\": \"BTC/MXN\",\n        \"volume\": 534725.9399114741\n    },\n    {\n        \"price\": 6466.8978128,\n        \"link\": \"https://liqui.io/\",\n        \"exchange\": \"Liqui\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 528257.9246896984\n    },\n    {\n        \"price\": 6429.93,\n        \"link\": \"https://exmo.com\",\n        \"exchange\": \"Exmo\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 496522.5565531998\n    },\n    {\n        \"price\": 6318.07025616,\n        \"link\": \"https://www.therocktrading.com/\",\n        \"exchange\": \"TheRockTrading\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 492793.79441279994\n    },\n    {\n        \"price\": 6318.07025616,\n        \"exchange\": \"Therock\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 492793.79441279994\n    },\n    {\n        \"price\": 6176.623138882109,\n        \"exchange\": \"Cobinhood\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 460160.0751946992\n    },\n    {\n        \"price\": 7353.58234,\n        \"link\": \"https://www.qryptos.com\",\n        \"exchange\": \"Qryptos\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 454170.27998431254\n    },\n    {\n        \"price\": 6661.13437041259,\n        \"link\": \"https://www.quadrigacx.com/\",\n        \"exchange\": \"QuadrigaCX\",\n        \"pair\": \"BTC/CAD\",\n        \"volume\": 397655.8000761862\n    },\n    {\n        \"price\": 6257.841201047475,\n        \"link\": \"https://www.kraken.com\",\n        \"exchange\": \"Kraken\",\n        \"pair\": \"BTC/CAD\",\n        \"volume\": 389003.6280047791\n    },\n    {\n        \"price\": 6341.738547406019,\n        \"link\": \"https://www.gdax.com/\",\n        \"exchange\": \"GDAX\",\n        \"pair\": \"BTC/USDC\",\n        \"volume\": 384550.0349072083\n    },\n    {\n        \"price\": 6703.59139704,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 383771.89033139497\n    },\n    {\n        \"price\": 6436.51,\n        \"link\": \"https://www.exx.com/\",\n        \"exchange\": \"Exx\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 367361.233646\n    },\n    {\n        \"price\": 6443.050969185461,\n        \"link\": \"https://www.bitfinex.com\",\n        \"exchange\": \"Bitfinex\",\n        \"pair\": \"BTC/GBP\",\n        \"volume\": 358265.36617045687\n    },\n    {\n        \"price\": 6273.979878239999,\n        \"link\": \"https://bitbay.net\",\n        \"exchange\": \"BitBay\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 344062.53609724215\n    },\n    {\n        \"price\": 6243.74576675952,\n        \"exchange\": \"Exrates\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 342592.0200361612\n    },\n    {\n        \"price\": 6420.760866254455,\n        \"link\": \"https://www.exx.com/\",\n        \"exchange\": \"Exx\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 296003.25200000004\n    },\n    {\n        \"price\": 6346.405680611847,\n        \"link\": \"https://exmo.com\",\n        \"exchange\": \"Exmo\",\n        \"pair\": \"BTC/PLN\",\n        \"volume\": 290123.71539914317\n    },\n    {\n        \"price\": 6355.4629249713125,\n        \"link\": \"https://hitbtc.com/\",\n        \"exchange\": \"HitBTC\",\n        \"pair\": \"BTC/EURS\",\n        \"volume\": 287250.3744360181\n    },\n    {\n        \"price\": 6215.646092168744,\n        \"link\": \"https://remitano.com/\",\n        \"exchange\": \"Remitano\",\n        \"pair\": \"BTC/MYR\",\n        \"volume\": 286642.1963490947\n    },\n    {\n        \"price\": 6304.04201028,\n        \"exchange\": \"LiteBit\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 265296.1078113243\n    },\n    {\n        \"price\": 6349.728397318708,\n        \"link\": \"https://bitflyer.jp/en/\",\n        \"exchange\": \"bitFlyer\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 246579.5316988553\n    },\n    {\n        \"price\": 6349.833669184236,\n        \"link\": \"https://hitbtc.com/\",\n        \"exchange\": \"HitBTC\",\n        \"pair\": \"BTC/TUSD\",\n        \"volume\": 243754.4083898401\n    },\n    {\n        \"price\": 6619.9822938197785,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/AUD\",\n        \"volume\": 240562.6324179353\n    },\n    {\n        \"price\": 6300.09,\n        \"link\": \"https://www.okcoin.com/\",\n        \"exchange\": \"OKCoin\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 219747.32514199996\n    },\n    {\n        \"price\": 6352.328946283927,\n        \"exchange\": \"LBank\",\n        \"pair\": \"BTC/TUSD\",\n        \"volume\": 204527.20554929288\n    },\n    {\n        \"price\": 6326.070315573828,\n        \"link\": \"https://quoine.com\",\n        \"exchange\": \"Quoine\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 197017.9578231302\n    },\n    {\n        \"price\": 6289.204766639999,\n        \"link\": \"\",\n        \"exchange\": \"itBit\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 192753.49043767573\n    },\n    {\n        \"price\": 6459.74485747421,\n        \"link\": \"https://gate.io\",\n        \"exchange\": \"Gate.io\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 174076.9103900748\n    },\n    {\n        \"price\": 6274.56962633574,\n        \"link\": \"https://bittrex.com\",\n        \"exchange\": \"Bittrex\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 167059.90516748262\n    },\n    {\n        \"price\": 6371.859055873829,\n        \"link\": \"https://www.quadrigacx.com/\",\n        \"exchange\": \"QuadrigaCX\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 156897.44679286217\n    },\n    {\n        \"price\": 6372.9776286446895,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/INR\",\n        \"volume\": 156080.35630766535\n    },\n    {\n        \"price\": 6979.267731205402,\n        \"link\": \"https://www.lakebtc.com\",\n        \"exchange\": \"LakeBTC\",\n        \"pair\": \"BTC/CAD\",\n        \"volume\": 154943.21930809008\n    },\n    {\n        \"price\": 6270.147733155394,\n        \"link\": \"https://quoine.com\",\n        \"exchange\": \"Quoine\",\n        \"pair\": \"BTC/SGD\",\n        \"volume\": 148063.26869613444\n    },\n    {\n        \"price\": 6296.183206106869,\n        \"link\": \"https://gemini.com/\",\n        \"exchange\": \"Gemini\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 141417.0669554\n    },\n    {\n        \"price\": 6426.900346931524,\n        \"link\": \"https://www.cryptopia.co.nz\",\n        \"exchange\": \"Cryptopia\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 130485.08782009785\n    },\n    {\n        \"price\": 6305.18913663103,\n        \"link\": \"https://www.bitmarket.net/\",\n        \"exchange\": \"BitMarket\",\n        \"pair\": \"BTC/PLN\",\n        \"volume\": 127959.62033335793\n    },\n    {\n        \"price\": 6457.732057,\n        \"exchange\": \"StocksExchange\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 120668.82423367388\n    },\n    {\n        \"price\": 6289.957584,\n        \"link\": \"https://www.coinfloor.co.uk/\",\n        \"exchange\": \"Coinfloor\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 117363.4805730096\n    },\n    {\n        \"price\": 6371.435357080595,\n        \"link\": \"\",\n        \"exchange\": \"Braziliex\",\n        \"pair\": \"BTC/BRL\",\n        \"volume\": 116729.40510966237\n    },\n    {\n        \"price\": 8870.979,\n        \"link\": \"\",\n        \"exchange\": \"Wex\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 116023.8238\n    },\n    {\n        \"price\": 6182.3788706903415,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/THB\",\n        \"volume\": 105573.47519645398\n    },\n    {\n        \"price\": 6508.535859376482,\n        \"link\": \"https://bleutrade.com/\",\n        \"exchange\": \"Bleutrade\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 104898.45526651315\n    },\n    {\n        \"price\": 6380.637406055049,\n        \"exchange\": \"Exrates\",\n        \"pair\": \"BTC/IDR\",\n        \"volume\": 88006.9832269842\n    },\n    {\n        \"price\": 6615.00000003,\n        \"link\": \"https://yobit.net/\",\n        \"exchange\": \"Yobit\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 81261.98822644\n    },\n    {\n        \"price\": 6642.633041363806,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/MXN\",\n        \"volume\": 81218.47673897777\n    },\n    {\n        \"price\": 6622.059867436135,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/SEK\",\n        \"volume\": 77607.91235748115\n    },\n    {\n        \"price\": 6999.353837650039,\n        \"link\": \"https://www.qryptos.com\",\n        \"exchange\": \"Qryptos\",\n        \"pair\": \"BTC/HKD\",\n        \"volume\": 75271.05117008851\n    },\n    {\n        \"price\": 6489.439813539131,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/ZAR\",\n        \"volume\": 73504.98468265559\n    },\n    {\n        \"price\": 6380.447413368906,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/MYR\",\n        \"volume\": 72059.06714636351\n    },\n    {\n        \"price\": 6564.502721327228,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/BRL\",\n        \"volume\": 70511.25671324709\n    },\n    {\n        \"price\": 7140.7715955083995,\n        \"link\": \"https://www.qryptos.com\",\n        \"exchange\": \"Qryptos\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 66851.30656582883\n    },\n    {\n        \"price\": 6365.401229002564,\n        \"link\": \"https://www.kucoin.com\",\n        \"exchange\": \"Kucoin\",\n        \"pair\": \"BTC/PAX\",\n        \"volume\": 66412.85220123724\n    },\n    {\n        \"price\": 6908.560240194434,\n        \"link\": \"https://www.lakebtc.com\",\n        \"exchange\": \"LakeBTC\",\n        \"pair\": \"BTC/GBP\",\n        \"volume\": 65836.50652098091\n    },\n    {\n        \"price\": 6536.535204254309,\n        \"link\": \"https://exmo.com\",\n        \"exchange\": \"Exmo\",\n        \"pair\": \"BTC/TRY\",\n        \"volume\": 50930.252093125986\n    },\n    {\n        \"price\": 6387.51147842057,\n        \"link\": \"https://cex.io\",\n        \"exchange\": \"CEX.IO\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 50570.5794438\n    },\n    {\n        \"price\": 6283.4,\n        \"link\": \"https://bitflyer.jp/en/\",\n        \"exchange\": \"bitFlyer\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 49808.101641092995\n    },\n    {\n        \"price\": 6111.711621758231,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/CAD\",\n        \"volume\": 46825.037066783036\n    },\n    {\n        \"price\": 6858.659237980189,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/RON\",\n        \"volume\": 45680.40953799785\n    },\n    {\n        \"price\": 6374.810047299656,\n        \"link\": \"https://www.bibox.com/\",\n        \"exchange\": \"Bibox\",\n        \"pair\": \"BTC/DAI\",\n        \"volume\": 44623.67033109759\n    },\n    {\n        \"price\": 6847.604608550636,\n        \"exchange\": \"StocksExchange\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 43100.97493075789\n    },\n    {\n        \"price\": 6469.7970669198785,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/HKD\",\n        \"volume\": 42850.90246325312\n    },\n    {\n        \"price\": 6610.01,\n        \"link\": \"https://www.quadrigacx.com/\",\n        \"exchange\": \"QuadrigaCX\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 40165.2358310588\n    },\n    {\n        \"price\": 6273.42,\n        \"link\": \"https://www.lykke.com/\",\n        \"exchange\": \"Lykke\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 39210.03737681485\n    },\n    {\n        \"price\": 6324.441113519999,\n        \"link\": \"https://www.paymium.com/\",\n        \"exchange\": \"Paymium\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 39052.086130201664\n    },\n    {\n        \"price\": 6900.026540824105,\n        \"link\": \"https://www.lakebtc.com\",\n        \"exchange\": \"LakeBTC\",\n        \"pair\": \"BTC/SGD\",\n        \"volume\": 36354.72873778977\n    },\n    {\n        \"price\": 6552.291726384911,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/NZD\",\n        \"volume\": 35892.01683194636\n    },\n    {\n        \"price\": 6218.094855517781,\n        \"link\": \"https://bit2c.co.il\",\n        \"exchange\": \"Bit2C\",\n        \"pair\": \"BTC/ILS\",\n        \"volume\": 35300.92211050615\n    },\n    {\n        \"price\": 6829.171446354338,\n        \"link\": \"https://www.lakebtc.com\",\n        \"exchange\": \"LakeBTC\",\n        \"pair\": \"BTC/AUD\",\n        \"volume\": 32601.767909408078\n    },\n    {\n        \"price\": 6474.26131175,\n        \"link\": \"https://www.cryptopia.co.nz\",\n        \"exchange\": \"Cryptopia\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 32256.24532003\n    },\n    {\n        \"price\": 7317.404381839765,\n        \"link\": \"https://www.qryptos.com\",\n        \"exchange\": \"Qryptos\",\n        \"pair\": \"BTC/SGD\",\n        \"volume\": 30283.59025255059\n    },\n    {\n        \"price\": 6517.540350647279,\n        \"link\": \"https://www.livecoin.net/\",\n        \"exchange\": \"Livecoin\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 29127.599607624386\n    },\n    {\n        \"price\": 6373.022357159196,\n        \"exchange\": \"Coinexchange\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 24938.289590895096\n    },\n    {\n        \"price\": 6370.869033047736,\n        \"exchange\": \"Crex24\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 24509.207632547997\n    },\n    {\n        \"price\": 6327.302820846339,\n        \"link\": \"https://gatecoin.com\",\n        \"exchange\": \"Getecoin\",\n        \"pair\": \"BTC/HKD\",\n        \"volume\": 24257.20683553537\n    },\n    {\n        \"price\": 6191.08008,\n        \"exchange\": \"Crex24\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 24172.50226475303\n    },\n    {\n        \"price\": 6675.651015498587,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/NOK\",\n        \"volume\": 23517.86131226347\n    },\n    {\n        \"price\": 6094.728076107634,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/TRY\",\n        \"volume\": 22138.35575300473\n    },\n    {\n        \"price\": 6389.814996494898,\n        \"exchange\": \"CryptoBridge\",\n        \"pair\": \"BTC/RVN\",\n        \"volume\": 21710.510879670048\n    },\n    {\n        \"price\": 8214.465307912133,\n        \"link\": \"https://tidex.com/\",\n        \"exchange\": \"Tidex\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 21493.460019711412\n    },\n    {\n        \"price\": 6316.047383886131,\n        \"link\": \"https://www.lykke.com/\",\n        \"exchange\": \"Lykke\",\n        \"pair\": \"BTC/CHF\",\n        \"volume\": 20298.017530856217\n    },\n    {\n        \"price\": 6403,\n        \"link\": \"\",\n        \"exchange\": \"Btcturk\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 20297.51\n    },\n    {\n        \"price\": 8906.572370155549,\n        \"link\": \"\",\n        \"exchange\": \"Wex\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 18619.6574474803\n    },\n    {\n        \"price\": 6359.884122967645,\n        \"link\": \"https://www.luno.com/\",\n        \"exchange\": \"Luno\",\n        \"pair\": \"BTC/IDR\",\n        \"volume\": 17817.622403077727\n    },\n    {\n        \"price\": 6349.382476706087,\n        \"link\": \"https://www.kucoin.com\",\n        \"exchange\": \"Kucoin\",\n        \"pair\": \"BTC/USDC\",\n        \"volume\": 17212.92206560684\n    },\n    {\n        \"price\": 6429.249363957711,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/SGD\",\n        \"volume\": 16394.75683183275\n    },\n    {\n        \"price\": 6282.476503583209,\n        \"link\": \"https://www.kraken.com\",\n        \"exchange\": \"Kraken\",\n        \"pair\": \"BTC/JPY\",\n        \"volume\": 16022.534054838248\n    },\n    {\n        \"price\": 6303.44088,\n        \"link\": \"https://www.luno.com/\",\n        \"exchange\": \"Luno\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 14704.666884864\n    },\n    {\n        \"price\": 6326.596417729205,\n        \"exchange\": \"Indodax\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 13288.412539969577\n    },\n    {\n        \"price\": 6344.610761246823,\n        \"link\": \"https://www.kucoin.com\",\n        \"exchange\": \"Kucoin\",\n        \"pair\": \"BTC/TUSD\",\n        \"volume\": 12954.907048184892\n    },\n    {\n        \"price\": 5973.318105945555,\n        \"link\": \"https://cex.io\",\n        \"exchange\": \"CEX.IO\",\n        \"pair\": \"BTC/RUB\",\n        \"volume\": 11477.605957959151\n    },\n    {\n        \"price\": 7055.866207024107,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/DKK\",\n        \"volume\": 11229.535533958757\n    },\n    {\n        \"price\": 6960.786032346771,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/PHP\",\n        \"volume\": 10909.366041566722\n    },\n    {\n        \"price\": 179891.4952489978,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/AOA\",\n        \"volume\": 10855.895873556696\n    },\n    {\n        \"price\": 6315.093515151515,\n        \"link\": \"https://zaif.jp/\",\n        \"exchange\": \"Zaif\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 10735.6065604814\n    },\n    {\n        \"price\": 6380.40762116686,\n        \"exchange\": \"TradeOgre\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 10525.594348554952\n    },\n    {\n        \"price\": 6354.745717997006,\n        \"link\": \"https://www.therocktrading.com/\",\n        \"exchange\": \"TheRockTrading\",\n        \"pair\": \"BTC/XRP\",\n        \"volume\": 9927.765645501417\n    },\n    {\n        \"price\": 6354.745717997006,\n        \"exchange\": \"Therock\",\n        \"pair\": \"BTC/XRP\",\n        \"volume\": 9927.765645501417\n    },\n    {\n        \"price\": 6320.182639199999,\n        \"link\": \"https://gatecoin.com\",\n        \"exchange\": \"Getecoin\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 9878.399770149117\n    },\n    {\n        \"price\": 6620.289399904896,\n        \"link\": \"https://remitano.com/\",\n        \"exchange\": \"Remitano\",\n        \"pair\": \"BTC/INR\",\n        \"volume\": 9404.789171013836\n    },\n    {\n        \"price\": 6428.103469973943,\n        \"link\": \"https://www.btcmarkets.net/\",\n        \"exchange\": \"BTCMarkets\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 9292.348752279595\n    },\n    {\n        \"price\": 6025.586569958882,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/PLN\",\n        \"volume\": 8630.13359058008\n    },\n    {\n        \"price\": 6313.796771798233,\n        \"link\": \"https://remitano.com/\",\n        \"exchange\": \"Remitano\",\n        \"pair\": \"BTC/ZAR\",\n        \"volume\": 7656.257368206141\n    },\n    {\n        \"price\": 6499.99999998,\n        \"exchange\": \"TradeSatoshi\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 7337.61460854\n    },\n    {\n        \"price\": 6465.419492470805,\n        \"exchange\": \"BigOne\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 6699.6407888\n    },\n    {\n        \"price\": 6371.13245167953,\n        \"exchange\": \"Therock\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 6191.298736974\n    },\n    {\n        \"price\": 6371.13245167953,\n        \"link\": \"https://www.therocktrading.com/\",\n        \"exchange\": \"TheRockTrading\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 6191.298736974\n    },\n    {\n        \"price\": 8215.791890449073,\n        \"link\": \"https://remitano.com/\",\n        \"exchange\": \"Remitano\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 6051.429999999999\n    },\n    {\n        \"price\": 6582.708726925135,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/KRW\",\n        \"volume\": 5710.491131432035\n    },\n    {\n        \"price\": 7119.610967193399,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/CHF\",\n        \"volume\": 5012.309782439835\n    },\n    {\n        \"price\": 6481.093984065584,\n        \"exchange\": \"CryptoBridge\",\n        \"pair\": \"BTC/SMART\",\n        \"volume\": 4229.990144488372\n    },\n    {\n        \"price\": 6467.798144901255,\n        \"link\": \"https://bitbay.net\",\n        \"exchange\": \"BitBay\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 4098.694919199999\n    },\n    {\n        \"price\": 6561.912637774112,\n        \"link\": \"https://www.kraken.com\",\n        \"exchange\": \"Kraken\",\n        \"pair\": \"BTC/GBP\",\n        \"volume\": 3855.5961324022105\n    },\n    {\n        \"price\": 6150.522561369759,\n        \"exchange\": \"Crex24\",\n        \"pair\": \"BTC/RUB\",\n        \"volume\": 3697.306641708252\n    },\n    {\n        \"price\": 3745.51820547052,\n        \"link\": \"https://novaexchange.com/\",\n        \"exchange\": \"Novaexchange\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 3692.2206641181724\n    },\n    {\n        \"price\": 9070.77754008192,\n        \"link\": \"\",\n        \"exchange\": \"Wex\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 3496.8629408632796\n    },\n    {\n        \"price\": 6411.889734174886,\n        \"link\": \"https://bx.in.th/\",\n        \"exchange\": \"BX.in.th\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 3482.265494306968\n    },\n    {\n        \"price\": 8088.667374926612,\n        \"link\": \"\",\n        \"exchange\": \"Wex\",\n        \"pair\": \"BTC/RUB\",\n        \"volume\": 3373.08792761217\n    },\n    {\n        \"price\": 6508.98111273662,\n        \"link\": \"https://wavesplatform.com\",\n        \"exchange\": \"WavesDEX\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 3366.6933565540003\n    },\n    {\n        \"price\": 5967.138221197796,\n        \"exchange\": \"Crex24\",\n        \"pair\": \"BTC/JPY\",\n        \"volume\": 3160.840456107743\n    },\n    {\n        \"price\": 6318.418012835999,\n        \"link\": \"https://quoine.com\",\n        \"exchange\": \"Quoine\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 3089.599121538946\n    },\n    {\n        \"price\": 6540.55,\n        \"link\": \"https://wavesplatform.com\",\n        \"exchange\": \"WavesDEX\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 3051.0217775736\n    },\n    {\n        \"price\": 7502.236724382928,\n        \"link\": \"https://www.qryptos.com\",\n        \"exchange\": \"Qryptos\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 3033.395570298\n    },\n    {\n        \"price\": 6348,\n        \"exchange\": \"Crex24\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 2940.09364762\n    },\n    {\n        \"price\": 7498.157209154231,\n        \"exchange\": \"TradeSatoshi\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 2787.2715954132\n    },\n    {\n        \"price\": 6068.65874044452,\n        \"link\": \"https://remitano.com/\",\n        \"exchange\": \"Remitano\",\n        \"pair\": \"BTC/SGD\",\n        \"volume\": 2581.8911358058836\n    },\n    {\n        \"price\": 6342.788736474219,\n        \"link\": \"https://quoine.com\",\n        \"exchange\": \"Quoine\",\n        \"pair\": \"BTC/HKD\",\n        \"volume\": 2537.115494589688\n    },\n    {\n        \"price\": 6300,\n        \"link\": \"https://gatecoin.com\",\n        \"exchange\": \"Getecoin\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 2520\n    },\n    {\n        \"price\": 12591.175644272218,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/JPY\",\n        \"volume\": 2432.5497862717984\n    },\n    {\n        \"price\": 6317.007759927251,\n        \"link\": \"https://bitso.com\",\n        \"exchange\": \"Bitso\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 2340.042176572428\n    },\n    {\n        \"price\": 6290.030303030304,\n        \"link\": \"https://www.lykke.com/\",\n        \"exchange\": \"Lykke\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 2156.7953505772675\n    },\n    {\n        \"price\": 5718.675644865578,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/CZK\",\n        \"volume\": 2082.0871674324885\n    },\n    {\n        \"price\": 5988.70444461726,\n        \"exchange\": \"Crex24\",\n        \"pair\": \"BTC/CNY\",\n        \"volume\": 2060.1824606725168\n    },\n    {\n        \"price\": 6270.9777100248,\n        \"link\": \"https://www.bitmarket.net/\",\n        \"exchange\": \"BitMarket\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 1852.8499582847626\n    },\n    {\n        \"price\": 6340.697706243499,\n        \"exchange\": \"CryptoBridge\",\n        \"pair\": \"BTC/BTS\",\n        \"volume\": 1850.070550838362\n    },\n    {\n        \"price\": 6327.2575527809995,\n        \"link\": \"https://www.lykke.com/\",\n        \"exchange\": \"Lykke\",\n        \"pair\": \"BTC/LKK\",\n        \"volume\": 1709.647625222274\n    },\n    {\n        \"price\": 6355.286530850209,\n        \"link\": \"https://hitbtc.com/\",\n        \"exchange\": \"HitBTC\",\n        \"pair\": \"BTC/GUSD\",\n        \"volume\": 1664.6137132318252\n    },\n    {\n        \"price\": 6558.28776642,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/ETH\",\n        \"volume\": 1452.7585243326273\n    },\n    {\n        \"price\": 6290.291295575999,\n        \"link\": \"https://www.lykke.com/\",\n        \"exchange\": \"Lykke\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 1420.4174342265105\n    },\n    {\n        \"price\": 6602.259057469752,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/ILS\",\n        \"volume\": 1353.6674466991276\n    },\n    {\n        \"price\": 6286.978242068943,\n        \"link\": \"https://www.lykke.com/\",\n        \"exchange\": \"Lykke\",\n        \"pair\": \"BTC/GBP\",\n        \"volume\": 1349.3192025865426\n    },\n    {\n        \"price\": 6434.4104298264265,\n        \"link\": \"https://www.exx.com/\",\n        \"exchange\": \"Exx\",\n        \"pair\": \"BTC/TUSD\",\n        \"volume\": 1168.7205728319527\n    },\n    {\n        \"price\": 6415.200879608769,\n        \"exchange\": \"Upbit\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 1060.0000000999999\n    },\n    {\n        \"price\": 6415.13606366,\n        \"link\": \"https://bleutrade.com/\",\n        \"exchange\": \"Bleutrade\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 1041.11469363\n    },\n    {\n        \"price\": 6400,\n        \"link\": \"https://bitbay.net\",\n        \"exchange\": \"BitBay\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 1036.8520671592998\n    },\n    {\n        \"price\": 6355.788775758509,\n        \"exchange\": \"Therock\",\n        \"pair\": \"BTC/GUSD\",\n        \"volume\": 834.93193555792\n    },\n    {\n        \"price\": 6908.765861892448,\n        \"link\": \"https://www.lakebtc.com\",\n        \"exchange\": \"LakeBTC\",\n        \"pair\": \"BTC/CHF\",\n        \"volume\": 725.420415498707\n    },\n    {\n        \"price\": 3578.0595008578307,\n        \"link\": \"https://www.luno.com/\",\n        \"exchange\": \"Luno\",\n        \"pair\": \"BTC/MYR\",\n        \"volume\": 674.3210935316667\n    },\n    {\n        \"price\": 6105.692119233316,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/HRK\",\n        \"volume\": 632.8311149023469\n    },\n    {\n        \"price\": 6799.015857171829,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/IDR\",\n        \"volume\": 529.4717961036091\n    },\n    {\n        \"price\": 6151.940813408915,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/HUF\",\n        \"volume\": 527.0443978913504\n    },\n    {\n        \"price\": 6459.410843172681,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/LTC\",\n        \"volume\": 496.8637601207099\n    },\n    {\n        \"price\": 6843.954178268194,\n        \"link\": \"https://c-cex.com/\",\n        \"exchange\": \"CCEX\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 358.57125418980434\n    },\n    {\n        \"price\": 6305.319865319865,\n        \"exchange\": \"CoinSquare\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 297.3514841004361\n    },\n    {\n        \"price\": 6773.976413265807,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/BGN\",\n        \"volume\": 287.128673708626\n    },\n    {\n        \"price\": 6438.553297554609,\n        \"exchange\": \"Nanex\",\n        \"pair\": \"BTC/NANO\",\n        \"volume\": 233.39755702278262\n    },\n    {\n        \"price\": 6422.664624808575,\n        \"link\": \"https://gatecoin.com\",\n        \"exchange\": \"Getecoin\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 228.73973666399996\n    },\n    {\n        \"price\": 751.11,\n        \"link\": \"\",\n        \"exchange\": \"Wex\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 169.72606\n    },\n    {\n        \"price\": 6320,\n        \"link\": \"\",\n        \"exchange\": \"Braziliex\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 163.048\n    },\n    {\n        \"price\": 6431.121281464531,\n        \"exchange\": \"RightBTC\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 151.32663017640002\n    },\n    {\n        \"price\": 6655.564887165908,\n        \"link\": \"\",\n        \"exchange\": \"Braziliex\",\n        \"pair\": \"ETH/BTC\",\n        \"volume\": 104.4688922217\n    },\n    {\n        \"price\": 6637.519342752124,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/XRP\",\n        \"volume\": 88.9136204829638\n    },\n    {\n        \"price\": 1393.41078485718,\n        \"link\": \"https://localbitcoins.com\",\n        \"exchange\": \"LocalBitcoins\",\n        \"pair\": \"BTC/BOB\",\n        \"volume\": 75.41136380825489\n    },\n    {\n        \"price\": 6370.108251194929,\n        \"exchange\": \"CryptoMKT\",\n        \"pair\": \"BTC/BRL\",\n        \"volume\": 64.38905420307835\n    },\n    {\n        \"price\": 6794,\n        \"exchange\": \"StocksExchange\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 59.024845260000006\n    },\n    {\n        \"price\": 6391.060184157185,\n        \"exchange\": \"Upbit\",\n        \"pair\": \"BTC/KRW\",\n        \"volume\": 52.05569648477501\n    },\n    {\n        \"price\": 6628.963810987276,\n        \"exchange\": \"StocksExchange\",\n        \"pair\": \"BTC/RUB\",\n        \"volume\": 48.147224793410345\n    },\n    {\n        \"price\": 6288.8823484375,\n        \"link\": \"https://bleutrade.com/\",\n        \"exchange\": \"Bleutrade\",\n        \"pair\": \"BTC/DOGE\",\n        \"volume\": 47.57743982860642\n    },\n    {\n        \"price\": 6615.6566,\n        \"link\": \"https://tidex.com/\",\n        \"exchange\": \"Tidex\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 23.355054138792017\n    },\n    {\n        \"price\": 6383.17210368,\n        \"link\": \"https://wavesplatform.com\",\n        \"exchange\": \"WavesDEX\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 15.022667882568804\n    },\n    {\n        \"price\": 7791.007421556,\n        \"link\": \"https://coingi.com/\",\n        \"exchange\": \"Coingi\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 10.528206959999999\n    },\n    {\n        \"price\": 6449.76582203,\n        \"exchange\": \"Upbit\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 5.47791510796652\n    },\n    {\n        \"price\": 6371.455877668047,\n        \"exchange\": \"CoinSquare\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 1.8212452188670514\n    },\n    {\n        \"price\": 8195.1775,\n        \"link\": \"https://coingi.com/\",\n        \"exchange\": \"Coingi\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 1.62\n    },\n    {\n        \"price\": 6192.157004786001,\n        \"link\": \"https://bleutrade.com/\",\n        \"exchange\": \"Bleutrade\",\n        \"pair\": \"BTC/ETH\",\n        \"volume\": 0.2902887450643685\n    },\n    {\n        \"price\": 7185.8704639036005,\n        \"exchange\": \"Exrates\",\n        \"pair\": \"BTC/CNY\",\n        \"volume\": 0.1149739274224576\n    },\n    {\n        \"price\": 6388.889723727184,\n        \"exchange\": \"CoinSquare\",\n        \"pair\": \"BTC/CAD\",\n        \"volume\": 0.000763077160927541\n    },\n    {\n        \"price\": 5330.237226878613,\n        \"link\": \"https://www.qryptos.com\",\n        \"exchange\": \"Qryptos\",\n        \"pair\": \"BTC/IDR\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 14121.076923076922,\n        \"link\": \"\",\n        \"exchange\": \"Abucoins\",\n        \"pair\": \"ETH/BTC\"\n    },\n    {\n        \"price\": 18230.28546370964,\n        \"link\": \"https://www.qryptos.com\",\n        \"exchange\": \"Qryptos\",\n        \"pair\": \"BTC/INR\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 2556.300410498818,\n        \"link\": \"https://btc-e.com/\",\n        \"exchange\": \"BTCE\",\n        \"pair\": \"ETH/BTC\"\n    },\n    {\n        \"price\": 6365,\n        \"link\": \"https://www.coinfloor.co.uk/\",\n        \"exchange\": \"Coinfloor\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 3649.703782837128,\n        \"link\": \"https://bter.com/\",\n        \"exchange\": \"BTER\",\n        \"pair\": \"ETH/BTC\"\n    },\n    {\n        \"price\": 7422.103514302174,\n        \"link\": \"https://www.qryptos.com\",\n        \"exchange\": \"Qryptos\",\n        \"pair\": \"BTC/PHP\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 493.91738400810095,\n        \"link\": \"https://openledger.info\",\n        \"exchange\": \"CCEDK\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 290.391574909146,\n        \"link\": \"https://openledger.info\",\n        \"exchange\": \"CCEDK\",\n        \"pair\": \"BTC/GBP\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 7706.83949355579,\n        \"link\": \"\",\n        \"exchange\": \"Abucoins\",\n        \"pair\": \"BTC/PLN\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 0.0016408021491086772,\n        \"link\": \"https://openledger.info\",\n        \"exchange\": \"CCEDK\",\n        \"pair\": \"BTC/RUB\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 6334.038939568468,\n        \"link\": \"https://quoine.com\",\n        \"exchange\": \"Quoine\",\n        \"pair\": \"BTC/AUD\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 6323.566008235168,\n        \"link\": \"https://quoine.com\",\n        \"exchange\": \"Quoine\",\n        \"pair\": \"BTC/CNY\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 530,\n        \"link\": \"https://openledger.info\",\n        \"exchange\": \"CCEDK\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 7307.511835212249,\n        \"link\": \"https://www.lakebtc.com\",\n        \"exchange\": \"LakeBTC\",\n        \"pair\": \"BTC/HKD\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 6463.475037493704,\n        \"link\": \"https://quoine.com\",\n        \"exchange\": \"Quoine\",\n        \"pair\": \"BTC/IDR\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 18230.28546370964,\n        \"link\": \"https://quoine.com\",\n        \"exchange\": \"Quoine\",\n        \"pair\": \"BTC/INR\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 194.87635132341254,\n        \"link\": \"https://btc-e.com/\",\n        \"exchange\": \"BTCE\",\n        \"pair\": \"BTC/GBP\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 6454.226361889224,\n        \"link\": \"https://quoine.com\",\n        \"exchange\": \"Quoine\",\n        \"pair\": \"BTC/PHP\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 9096.540081857844,\n        \"link\": \"https://www.lakebtc.com\",\n        \"exchange\": \"LakeBTC\",\n        \"pair\": \"BTC/NZD\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 2274.6230612376007,\n        \"link\": \"https://btc-e.com/\",\n        \"exchange\": \"BTCE\",\n        \"pair\": \"BTC/RUB\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 7661.755065659553,\n        \"link\": \"https://remitano.com/\",\n        \"exchange\": \"Remitano\",\n        \"pair\": \"BTC/AUD\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 7216.689664146291,\n        \"link\": \"https://remitano.com/\",\n        \"exchange\": \"Remitano\",\n        \"pair\": \"BTC/CAD\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 6510.398640296662,\n        \"link\": \"https://remitano.com/\",\n        \"exchange\": \"Remitano\",\n        \"pair\": \"BTC/CNY\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 5135.716855094997,\n        \"link\": \"https://remitano.com/\",\n        \"exchange\": \"Remitano\",\n        \"pair\": \"BTC/GBP\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 2546,\n        \"link\": \"https://btc-e.com/\",\n        \"exchange\": \"BTCE\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 6290,\n        \"link\": \"https://www.coinbase.com/\",\n        \"exchange\": \"Coinbase\",\n        \"pair\": \"ETH/BTC\"\n    },\n    {\n        \"price\": 3688.938461349552,\n        \"link\": \"\",\n        \"exchange\": \"CHBTC\",\n        \"pair\": \"BTC/CNY\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 416796172,\n        \"exchange\": \"CryptoBridge\",\n        \"pair\": \"ETH/BTC\"\n    },\n    {\n        \"price\": 13192.844698538524,\n        \"link\": \"https://remitano.com/\",\n        \"exchange\": \"Remitano\",\n        \"pair\": \"BTC/PHP\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 9250.766974358554,\n        \"link\": \"https://remitano.com/\",\n        \"exchange\": \"Remitano\",\n        \"pair\": \"BTC/SEK\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 6250.95,\n        \"exchange\": \"Cobinhood\",\n        \"pair\": \"BTC/USD\"\n    },\n    {\n        \"price\": 6523.84,\n        \"link\": \"www.acx.com/\",\n        \"exchange\": \"Acx\",\n        \"pair\": \"BTC/USDT\"\n    },\n    {\n        \"price\": 15.045983587499999,\n        \"link\": \"https://bter.com/\",\n        \"exchange\": \"BTER\",\n        \"pair\": \"BTC/BITUSD\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 554.9963937573162,\n        \"link\": \"https://bter.com/\",\n        \"exchange\": \"BTER\",\n        \"pair\": \"BTC/CNY\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 6302.655120215765,\n        \"exchange\": \"CoinSpot\",\n        \"pair\": \"BTC/AUD\"\n    },\n    {\n        \"price\": 695.8231896584357,\n        \"exchange\": \"CoinSquare\",\n        \"pair\": \"BTC/AUD\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 448.98476793599997,\n        \"exchange\": \"StocksExchange\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 7885.998131711901,\n        \"exchange\": \"StocksExchange\",\n        \"pair\": \"BTC/JPY\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 8210.51,\n        \"link\": \"\",\n        \"exchange\": \"Abucoins\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 6231.6985091999995,\n        \"link\": \"\",\n        \"exchange\": \"Abucoins\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 6467.28341751324,\n        \"exchange\": \"Idax\",\n        \"pair\": \"BTC/CNY\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 5618.04,\n        \"exchange\": \"CryptoMKT\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 6376.8100120948175,\n        \"exchange\": \"CryptoMKT\",\n        \"pair\": \"BTC/MXN\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 3966.4567786655093,\n        \"link\": \"\",\n        \"exchange\": \"Jubi\",\n        \"pair\": \"BTC/CNY\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 2816.1903513513516,\n        \"link\": \"https://www.lakebtc.com\",\n        \"exchange\": \"LakeBTC\",\n        \"pair\": \"ETH/BTC\"\n    },\n    {\n        \"price\": 6561.784945439074,\n        \"exchange\": \"CoinSquare\",\n        \"pair\": \"BTC/GBP\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 6172.176450824857,\n        \"link\": \"https://www.lykke.com/\",\n        \"exchange\": \"Lykke\",\n        \"pair\": \"BTC/JPY\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 5812.506900842344,\n        \"link\": \"\",\n        \"exchange\": \"BTC38\",\n        \"pair\": \"BTC/CNY\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 2502.11003663736,\n        \"link\": \"https://btc-e.com/\",\n        \"exchange\": \"BTCE\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 7130.981,\n        \"link\": \"https://trustdex.io/\",\n        \"exchange\": \"TrustDEX\",\n        \"pair\": \"BTC/USD\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 6482.71,\n        \"link\": \"https://trustdex.io/\",\n        \"exchange\": \"TrustDEX\",\n        \"pair\": \"BTC/USDT\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 5425.480414007419,\n        \"link\": \"https://www.unocoin.com/\",\n        \"exchange\": \"Unocoin\",\n        \"pair\": \"BTC/INR\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 6290.475,\n        \"exchange\": \"UpHold\",\n        \"pair\": \"BTC/USD\"\n    },\n    {\n        \"price\": 327.40869260598146,\n        \"link\": \"https://openledger.info\",\n        \"exchange\": \"CCEDK\",\n        \"pair\": \"BTC/BITCNY\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 6286.547518215205,\n        \"link\": \"https://www.coinbase.com/\",\n        \"exchange\": \"Coinbase\",\n        \"pair\": \"BTC/CAD\"\n    },\n    {\n        \"price\": 3720.556291390728,\n        \"link\": \"\",\n        \"exchange\": \"ViaBTC\",\n        \"pair\": \"BTC/CNY\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 5576.235479989194,\n        \"link\": \"https://www.okcoin.com/\",\n        \"exchange\": \"OKCoin\",\n        \"pair\": \"BTC/CNY\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 933.0091669274848,\n        \"link\": \"https://www.okcoin.com/\",\n        \"exchange\": \"OKCoin\",\n        \"pair\": \"BTC/LTC\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 1.7173006953,\n        \"link\": \"https://wavesplatform.com\",\n        \"exchange\": \"WavesDEX\",\n        \"pair\": \"BTC/WAVES\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 6285.699109679999,\n        \"link\": \"https://www.coinbase.com/\",\n        \"exchange\": \"Coinbase\",\n        \"pair\": \"BTC/EUR\"\n    },\n    {\n        \"price\": 6288.24687421034,\n        \"link\": \"https://www.coinbase.com/\",\n        \"exchange\": \"Coinbase\",\n        \"pair\": \"BTC/GBP\"\n    },\n    {\n        \"price\": 6496.217327772707,\n        \"link\": \"https://trustdex.io/\",\n        \"exchange\": \"TrustDEX\",\n        \"pair\": \"ETH/BTC\"\n    },\n    {\n        \"price\": 6290,\n        \"link\": \"https://www.coinbase.com/\",\n        \"exchange\": \"Coinbase\",\n        \"pair\": \"BTC/USD\"\n    },\n    {\n        \"price\": 430.5947868188033,\n        \"link\": \"https://openledger.info\",\n        \"exchange\": \"CCEDK\",\n        \"pair\": \"BTC/BITUSD\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 280.902,\n        \"link\": \"\",\n        \"exchange\": \"Yacuna\",\n        \"pair\": \"BTC/EUR\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 193.58577946034356,\n        \"link\": \"\",\n        \"exchange\": \"Yacuna\",\n        \"pair\": \"BTC/GBP\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 10968.320315789475,\n        \"link\": \"https://yunbi.com/\",\n        \"exchange\": \"Yunbi\",\n        \"pair\": \"ETH/BTC\"\n    },\n    {\n        \"price\": 0.00143717409278072,\n        \"link\": \"https://openledger.info\",\n        \"exchange\": \"CCEDK\",\n        \"pair\": \"BTC/CNY\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 371.13426182499995,\n        \"link\": \"https://yunbi.com/\",\n        \"exchange\": \"Yunbi\",\n        \"pair\": \"BTC/BITUSD\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 4110.317905352859,\n        \"link\": \"https://yunbi.com/\",\n        \"exchange\": \"Yunbi\",\n        \"pair\": \"BTC/CNY\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 7350.03665074834,\n        \"link\": \"https://www.qryptos.com\",\n        \"exchange\": \"Qryptos\",\n        \"pair\": \"BTC/AUD\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 16680.704825268705,\n        \"link\": \"https://www.qryptos.com\",\n        \"exchange\": \"Qryptos\",\n        \"pair\": \"BTC/CNY\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 459.4785863972865,\n        \"link\": \"https://openledger.info\",\n        \"exchange\": \"CCEDK\",\n        \"pair\": \"BTC/DKK\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 7065.693253854204,\n        \"link\": \"https://www.coinfloor.co.uk/\",\n        \"exchange\": \"Coinfloor\",\n        \"pair\": \"BTC/PLN\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 6403.120374131171,\n        \"link\": \"\",\n        \"exchange\": \"itBit\",\n        \"pair\": \"BTC/SGD\",\n        \"volume\": 0\n    },\n    {\n        \"price\": 6467.525245769769,\n        \"link\": \"https://tuxexchange.com\",\n        \"exchange\": \"TuxExchange\",\n        \"pair\": \"ETH/BTC\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Tickers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ROOT}}/public/v1/tickers?exchange=yobit&pair=BTC-USD",
+							"host": [
+								"{{API_ROOT}}"
+							],
+							"path": [
+								"public",
+								"v1",
+								"tickers"
+							],
+							"query": [
+								{
+									"key": "exchange",
+									"value": "yobit"
+								},
+								{
+									"key": "pair",
+									"value": "BTC-USD"
+								}
+							]
+						},
+						"description": "Get tickers prices for exchange and a coin"
+					},
+					"response": [
+						{
+							"name": "Get Tickers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.coinstats.app/public/v1/tickers?exchange=yobit&pair=BTC-USD",
+									"protocol": "https",
+									"host": [
+										"api",
+										"coinstats",
+										"app"
+									],
+									"path": [
+										"public",
+										"v1",
+										"tickers"
+									],
+									"query": [
+										{
+											"key": "exchange",
+											"value": "yobit"
+										},
+										{
+											"key": "pair",
+											"value": "BTC-USD",
+											"description": "(Optional)"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 13 Nov 2018 11:22:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-fdbac294\""
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "4790dbf68b2f70f3-EVN"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"tickers\": [\n        {\n            \"from\": \"BTC\",\n            \"to\": \"USD\",\n            \"exchange\": \"Yobit\",\n            \"price\": 6609.651\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Fiat currencies",
+			"item": [
+				{
+					"name": "Get Fiats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ROOT}}/public/v1/fiats",
+							"host": [
+								"{{API_ROOT}}"
+							],
+							"path": [
+								"public",
+								"v1",
+								"fiats"
+							]
+						},
+						"description": "Get Fiat Currencies"
+					},
+					"response": [
+						{
+							"name": "Get Fiats",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.coinstats.app/public/v1/fiats",
+									"protocol": "https",
+									"host": [
+										"api",
+										"coinstats",
+										"app"
+									],
+									"path": [
+										"public",
+										"v1",
+										"fiats"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 13 Nov 2018 11:19:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"TJG8ehtYd6TTqNCFC+A4Cg==\""
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "4790d7d82ac170f3-EVN"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"name\": \"AUD\",\n        \"rate\": 1.3888505778832099,\n        \"symbol\": \"$\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/AUD.png\"\n    },\n    {\n        \"name\": \"BGN\",\n        \"rate\": 1.7405500590384957,\n        \"symbol\": \"лв\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/BGN.png\"\n    },\n    {\n        \"name\": \"BRL\",\n        \"rate\": 3.767499552873489,\n        \"symbol\": \"R$\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/BRL.png\"\n    },\n    {\n        \"name\": \"CAD\",\n        \"rate\": 1.3236555283967602,\n        \"symbol\": \"$\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/CAD.png\"\n    },\n    {\n        \"name\": \"CHF\",\n        \"rate\": 1.0110050959075245,\n        \"symbol\": \"CHF\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/CHF.png\"\n    },\n    {\n        \"name\": \"CNY\",\n        \"rate\": 6.958301115013397,\n        \"symbol\": \"CN¥\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/CNY.png\"\n    },\n    {\n        \"name\": \"CZK\",\n        \"rate\": 23.09399177643141,\n        \"symbol\": \"Kč\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/CZK.png\"\n    },\n    {\n        \"name\": \"DKK\",\n        \"rate\": 6.638697754045717,\n        \"symbol\": \"kr\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/DKK.png\"\n    },\n    {\n        \"name\": \"EUR\",\n        \"rate\": 0.8898040028722873,\n        \"symbol\": \"€\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/EUR.jpg\"\n    },\n    {\n        \"name\": \"GBP\",\n        \"rate\": 0.7749249672774577,\n        \"symbol\": \"£\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/GBP.png\"\n    },\n    {\n        \"name\": \"HKD\",\n        \"rate\": 7.828972552215924,\n        \"symbol\": \"$\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/HKD.png\"\n    },\n    {\n        \"name\": \"HRK\",\n        \"rate\": 6.608399927747915,\n        \"symbol\": \"kn\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/HRK.png\"\n    },\n    {\n        \"name\": \"HUF\",\n        \"rate\": 287.2021358855285,\n        \"symbol\": \"Ft\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/HUF.png\"\n    },\n    {\n        \"name\": \"IDR\",\n        \"rate\": 14838.004317329025,\n        \"symbol\": \"Rp\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/IDR.png\"\n    },\n    {\n        \"name\": \"ILS\",\n        \"rate\": 3.6924214503271364,\n        \"symbol\": \"₪\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/ILS.png\"\n    },\n    {\n        \"name\": \"INR\",\n        \"rate\": 72.65505324142252,\n        \"symbol\": \"₹\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/INR.png\"\n    },\n    {\n        \"name\": \"ISK\",\n        \"rate\": 123.43021667617275,\n        \"symbol\": \"kr\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/ISK.png\"\n    },\n    {\n        \"name\": \"JPY\",\n        \"rate\": 114.11153426234804,\n        \"symbol\": \"￥\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/JPY.png\"\n    },\n    {\n        \"name\": \"KRW\",\n        \"rate\": 1134.560376315909,\n        \"symbol\": \"₩\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/KRW.png\"\n    },\n    {\n        \"name\": \"MXN\",\n        \"rate\": 20.42110508318333,\n        \"symbol\": \"$\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/MXN.png\"\n    },\n    {\n        \"name\": \"MYR\",\n        \"rate\": 4.194300271479201,\n        \"symbol\": \"RM\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/MYR.png\"\n    },\n    {\n        \"name\": \"NOK\",\n        \"rate\": 8.50809766132814,\n        \"symbol\": \"kr\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/NOK.png\"\n    },\n    {\n        \"name\": \"NZD\",\n        \"rate\": 1.4821803401364781,\n        \"symbol\": \"$\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/NZD.png\"\n    },\n    {\n        \"name\": \"PHP\",\n        \"rate\": 53.08106381407367,\n        \"symbol\": \"₱\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/PHP.png\"\n    },\n    {\n        \"name\": \"PLN\",\n        \"rate\": 3.8281112219411435,\n        \"symbol\": \"zł\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/PLN.png\"\n    },\n    {\n        \"name\": \"RON\",\n        \"rate\": 4.146604107513238,\n        \"symbol\": \"RON\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/RON.png\"\n    },\n    {\n        \"name\": \"RUB\",\n        \"rate\": 67.77901094725866,\n        \"symbol\": \"руб\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/RUB.png\"\n    },\n    {\n        \"name\": \"SEK\",\n        \"rate\": 9.105562787684757,\n        \"symbol\": \"kr\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/SEK.png\"\n    },\n    {\n        \"name\": \"SGD\",\n        \"rate\": 1.3828052494876955,\n        \"symbol\": \"$\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/SGD.png\"\n    },\n    {\n        \"name\": \"THB\",\n        \"rate\": 33.0250310764048,\n        \"symbol\": \"฿\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/THB.png\"\n    },\n    {\n        \"name\": \"TRY\",\n        \"rate\": 5.5064221603907315,\n        \"symbol\": \"TL\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/TRY.png\"\n    },\n    {\n        \"name\": \"ZAR\",\n        \"rate\": 14.473154168331343,\n        \"symbol\": \"R\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/EUR.jpg\"\n    },\n    {\n        \"name\": \"USD\",\n        \"rate\": 1,\n        \"symbol\": \"$\",\n        \"imageUrl\": \"https://s3-us-west-2.amazonaws.com/coin-stats-icons/flags/USD.png\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "News",
+			"item": [
+				{
+					"name": "Get News",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ROOT}}/public/v1/news?skip=0&limit=20&toDate=1555508420000&fromDate=1555508420000",
+							"host": [
+								"{{API_ROOT}}"
+							],
+							"path": [
+								"public",
+								"v1",
+								"news"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "toDate",
+									"value": "1555508420000",
+									"description": "optional, news till date"
+								},
+								{
+									"key": "fromDate",
+									"value": "1555508420000",
+									"description": "optional, news from date"
+								}
+							]
+						},
+						"description": "Latest crypto news from verified 40+ news sources"
+					},
+					"response": [
+						{
+							"name": "Get News",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_ROOT}}/public/v1/news?skip=0&limit=10",
+									"host": [
+										"{{API_ROOT}}"
+									],
+									"path": [
+										"public",
+										"v1",
+										"news"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 13 Nov 2018 11:21:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"kZFUkocJ4x/14gSMb21RYw==\""
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "4790da966ef170f3-EVN"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"news\": [\n        {\n            \"id\": \"10050097\",\n            \"feedDate\": 1542093852000,\n            \"source\": \"Coingape\",\n            \"title\": \"4350 TRX Up for Grabs on Price Prediction while TRON Gaining Traction on Exchanges and Social Media\",\n            \"isFeatured\": false,\n            \"description\": \"The cryptocurrency price index Coinraking is giving away 4350 TRX on correct Tron price prediction for November 16. Meanwhile, Tron is getting traction on Twitter, [...]\",\n            \"imgURL\": \"https://s3-us-west-2.amazonaws.com/coin-stats-news/sources/coingape.png\",\n            \"link\": \"https://coingape.com/4350-trx-up-grabs-price-prediction/?utm_medium=Organic&utm_source=coinstats\",\n            \"sourceLink\": \"https://coingape.com\",\n            \"reactionsCount\": {\n                \"2\": 1,\n                \"3\": 1\n            },\n            \"shareURL\": \"https://coinstats.app/news/10050097_4350-TRX-Up-for-Grabs-on-Price-Prediction-while-TRON-Gaining-Traction-on-Exchanges-and-Social-Media\",\n            \"relatedCoins\": [\n                \"tron\",\n                \"uptoken\"\n            ]\n        },\n        {\n            \"id\": \"10045094\",\n            \"feedDate\": 1542083778000,\n            \"source\": \"Investinblockchain\",\n            \"title\": \"Ripple Breaks Into China Through a Joint Venture Between AmEx and LianLian Group\",\n            \"isFeatured\": false,\n            \"description\": \"Ripple makes inroads into the Chinese market, thanks to its partnerships with American Express and the LianLian Group. Both…\",\n            \"imgURL\": \"https://s3-us-west-2.amazonaws.com/coin-stats-news/sources/investinblockchain.png\",\n            \"link\": \"https://www.investinblockchain.com/ripple-breaks-into-china/?utm_medium=Organic&utm_source=coinstats\",\n            \"sourceLink\": \"https://www.investinblockchain.com\",\n            \"reactionsCount\": {\n                \"1\": 1,\n                \"2\": 10,\n                \"3\": 1\n            },\n            \"shareURL\": \"https://coinstats.app/news/10045094_Ripple-Breaks-Into-China-Through-a-Joint-Venture-Between-AmEx-and-LianLian-Group\",\n            \"relatedCoins\": [\n                \"ripple\",\n                \"joint-ventures\"\n            ]\n        },\n        {\n            \"id\": \"10041479\",\n            \"feedDate\": 1542077224000,\n            \"source\": \"Bitcoin Warrior\",\n            \"title\": \"XRP is “explicitly legalized and endorsed” in Thailand, reveals Ripple’s Garlinghouse\",\n            \"isFeatured\": false,\n            \"description\": \"Brad Garlinghouse, the CEO of Ripple, recently appeared at the Singapore FinTech festival to speak about the regulatory atmosphere in the blockchain and cryptocurrency space. In a discussion with the International Monetary Fund’s Deputy General Counsel Ross Leckow, Garlinghouse spoke about the ASEAN markets and their role in Ripple’s plan for building the Internet of […]\",\n            \"imgURL\": \"https://s3-us-west-2.amazonaws.com/coin-stats-news/sources/bitcoinwarrior.png\",\n            \"link\": \"https://bitcoinwarrior.net/2018/11/xrp-is-explicitly-legalized-and-endorsed-in-thailand-reveals-ripples-garlinghouse/?utm_medium=Organic&utm_source=coinstats\",\n            \"sourceLink\": \"https://bitcoinwarrior.net\",\n            \"reactionsCount\": {\n                \"1\": 1,\n                \"2\": 19,\n                \"3\": 1\n            },\n            \"shareURL\": \"https://coinstats.app/news/10041479_XRP-is-explicitly-legalized-and-endorsed-in-Thailand-reveals-Ripples-Garlinghouse\",\n            \"relatedCoins\": [\n                \"ripple\"\n            ]\n        },\n        {\n            \"id\": \"10057733\",\n            \"feedDate\": 1542107519000,\n            \"source\": \"Reddit r/btc\",\n            \"title\": \"BCH just jumped up $15 in 10 seconds.\",\n            \"description\": \"BCH    submitted by    /u/alex210sa   [link]   [comments]\",\n            \"imgURL\": \"https://s3-us-west-2.amazonaws.com/coin-stats-news/sources/reddit.jpg\",\n            \"link\": \"https://www.reddit.com/r/btc/comments/9wo6i9/bch_just_jumped_up_15_in_10_seconds/?utm_medium=Organic&utm_source=coinstats\",\n            \"sourceLink\": \"https://www.reddit.com/r/btc\",\n            \"shareURL\": \"https://coinstats.app/news/10057733_BCH-just-jumped-up-15-in-10-seconds.\"\n        },\n        {\n            \"id\": \"10057312\",\n            \"feedDate\": 1542107019000,\n            \"source\": \"Coingape\",\n            \"title\": \"Binance CEO Denies his Recent Upcoming “Bull Market” Comment\",\n            \"description\": \"In a recent tweet, Binance CEO cleared the misconception of the media wherein it claimed that he predicts bitcoin and crypto bull run. However, his [...]\",\n            \"imgURL\": \"https://s3-us-west-2.amazonaws.com/coin-stats-news/sources/coingape.png\",\n            \"link\": \"https://coingape.com/binance-ceo-denie-bull-market-comment/?utm_medium=Organic&utm_source=coinstats\",\n            \"sourceLink\": \"https://coingape.com\",\n            \"shareURL\": \"https://coinstats.app/news/10057312_Binance-CEO-Denies-his-Recent-Upcoming-Bull-Market-Comment\"\n        },\n        {\n            \"id\": \"10057491\",\n            \"feedDate\": 1542106857000,\n            \"source\": \"BitCoinist\",\n            \"title\": \"Bitmain No Longer Under Influence of Jihan Wu, Says Lawyer\",\n            \"description\": \"Bitmain co-founder Jihan Wu no longer has influence over the company’s decision-making processes after an executive board reshuffle, a lawyer told local media November 12. Wu Now ‘Supervisor’ As Sanyan Blockchain reports, the mining giant altered the make-up of its board last week. Among the changes, Wu’s position went from a director to a “supervisor,” which leaves him unable to vote in board decisions. “After changing to a supervisor, there is no voting right, so\",\n            \"imgURL\": \"https://bitcoinist.com/wp-content/uploads/2018/08/qz-bitmain-cover-640x400.jpg\",\n            \"link\": \"https://bitcoinist.com/bitmain-jihan-wu-no-influence/?utm_medium=Organic&utm_source=coinstats\",\n            \"sourceLink\": \"http://bitcoinist.com\",\n            \"shareURL\": \"https://coinstats.app/news/10057491_Bitmain-No-Longer-Under-Influence-of-Jihan-Wu-Says-Lawyer\"\n        },\n        {\n            \"id\": \"10057461\",\n            \"feedDate\": 1542106846000,\n            \"source\": \"CoinDesk\",\n            \"title\": \"Bitcoin Back on the Defensive After Price Hits Two-Week Low\",\n            \"description\": \"Bitcoin price dropped to two-week lows earlier today and could extend the decline to key support near $6,100.\",\n            \"imgURL\": \"https://s3-us-west-2.amazonaws.com/coin-stats-news/sources/coindesk.png\",\n            \"link\": \"https://www.coindesk.com/bitcoin-back-on-the-defensive-after-price-hits-two-week-low?utm_medium=Organic&utm_source=coinstats\",\n            \"sourceLink\": \"http://www.coindesk.com\",\n            \"shareURL\": \"https://coinstats.app/news/10057461_Bitcoin-Back-on-the-Defensive-After-Price-Hits-TwoWeek-Low\"\n        },\n        {\n            \"id\": \"10057530\",\n            \"feedDate\": 1542106817000,\n            \"source\": \"Btcmanager\",\n            \"title\": \"Cryptocurrency Exchange Bithumb to Give Away Bitcoin, Ether, and XRP in Airdrop Event\",\n            \"description\": \"Bithumb, one of the biggest cryptocurrency exchanges in South East Asia and Korea in particular, has announced a ‘Super Airdrop Festival’ that any registered trader can participate in. In a Twitter post published November 12, 2018, the company said that the highlight of the event is a giveaway involving 15 BTC. This will be given to a random Bithumb member...Read More. The post by Rahul Nambiampurath appeared first on BTCManager, Bitcoin, Blockchain & Cryptocurrency News\",\n            \"imgURL\": \"https://btcmanager.com/wp-content/uploads/2018/11/Bithumb-Announces-The-Airdrop-Of-100-Million-Won-Worth-Of-BTC-350x209.jpg\",\n            \"link\": \"https://btcmanager.com/cryptocurrency-bithumb-btc-eth-airdrop-xrp/?utm_medium=Organic&utm_source=coinstats\",\n            \"sourceLink\": \"https://btcmanager.com\",\n            \"shareURL\": \"https://coinstats.app/news/10057530_Cryptocurrency-Exchange-Bithumb-to-Give-Away-Bitcoin-Ether-and-XRP-in-Airdrop-Event\"\n        },\n        {\n            \"id\": \"10057258\",\n            \"feedDate\": 1542106800000,\n            \"source\": \"CryptoGlobe\",\n            \"title\": \"Ripple Labs' Attorneys File to Move Consolidated Lawsuit Against Company to US Federal Court\",\n            \"description\": \"Attorneys representing American fintech company, Ripple Labs, have filed to move a consolidated class-action lawsuit initiated by XRP investors against the payments technology firm to US federal court.\\r\",\n            \"imgURL\": \"https://s3-us-west-2.amazonaws.com/coin-stats-news/sources/cryptoglobe.png\",\n            \"link\": \"https://www.cryptoglobe.com/latest/2018/11/ripple-labs-attorneys-move-consolidated-lawsuit-against-company-to-us-federal-court/?utm_medium=Organic&utm_source=coinstats\",\n            \"sourceLink\": \"https://www.cryptoglobe.com\",\n            \"shareURL\": \"https://coinstats.app/news/10057258_Ripple-Labs-Attorneys-File-to-Move-Consolidated-Lawsuit-Against-Company-to-US-Federal-Court\"\n        },\n        {\n            \"id\": \"10057421\",\n            \"feedDate\": 1542106800000,\n            \"source\": \"Cryptodaily\",\n            \"title\": \"Hong Kong Exchange Withdraws $1 Billion In Fiat\",\n            \"description\": \"The Hong Kong-based exchange, Bitfinex has just updated its withdrawal fee policy as well as processing $1 billion in fiat currency.\\r\",\n            \"imgURL\": \"https://s3-us-west-2.amazonaws.com/coin-stats-news/sources/cryptodaily.png\",\n            \"link\": \"https://cryptodaily.co.uk/2018/11/Hong-Kong-Exchange-Withdraws-Billion-In-Fiat?utm_medium=Organic&utm_source=coinstats\",\n            \"sourceLink\": \"https://cryptodaily.co.uk\",\n            \"shareURL\": \"https://coinstats.app/news/10057421_Hong-Kong-Exchange-Withdraws-1-Billion-In-Fiat\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get News With Filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ROOT}}/public/v1/news/handpicked?skip=0&limit=20",
+							"host": [
+								"{{API_ROOT}}"
+							],
+							"path": [
+								"public",
+								"v1",
+								"news",
+								"handpicked"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "20"
+								}
+							]
+						},
+						"description": "Latest crypto news from verified 40+ news sources with filter\n\nAvailable Filters\n\n1. handpicked\n2. trending\n3. latest\n4. bullish\n5. bearish"
+					},
+					"response": [
+						{
+							"name": "Get News With Filter",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_ROOT}}/public/v1/news/handpicked?skip=0&limit=20",
+									"host": [
+										"{{API_ROOT}}"
+									],
+									"path": [
+										"public",
+										"v1",
+										"news",
+										"handpicked"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"news\": [\n        {\n            \"id\": \"cOdyHaIFSf\",\n            \"feedDate\": 1572911153000,\n            \"source\": \"CoinDesk\",\n            \"title\": \"US Federal Reserve Hiring Retail Payments Manager to Integrate Digital Currencies\",\n            \"icon\": \"https://s3-us-west-2.amazonaws.com/coin-stats-news/sources/coindesk.png\",\n            \"imgURL\": \"https://s3-us-west-2.amazonaws.com/coin-stats-news/sources/coindesk.png\",\n            \"description\": \"The central bank is expanding the role of its Retail Payments Manager to include digital currencies, stablecoins and distributed ledger technologies as part of a new hire.\",\n            \"link\": \"https://www.coindesk.com/us-federal-reserve-hiring-retail-payments-manager-to-integrate-digital-currencies?utm_medium=Organic&utm_source=coinstats\",\n            \"sourceLink\": \"http://www.coindesk.com\",\n            \"reactionsCount\": {\n                \"2\": 13,\n                \"4\": 1\n            },\n            \"shareURL\": \"https://coinstats.app/news/cOdyHaIFSf_US-Federal-Reserve-Hiring-Retail-Payments-Manager-to-Integrate-Digital-Currencies\",\n            \"relatedCoins\": [\n                \"publish\"\n            ],\n            \"content\": false,\n            \"coins\": [\n                {\n                    \"coinKeyWords\": \"NEWS\",\n                    \"coinPercent\": 1.65,\n                    \"coinTitleKeyWords\": \"NEWS\",\n                    \"coinNameKeyWords\": \"PUBLISH\",\n                    \"coinIdKeyWords\": \"publish\"\n                }\n            ]\n        },\n        {\n            \"id\": \"LshIY4iHUD\",\n            \"feedDate\": 1572901200000,\n            \"source\": \"Binance Twitter\",\n            \"title\": \".@Binancex Newsletter | 2nd Issue\\n\\n#Binance X, the developer-focused division of Binance, regularly releases newsletters to keep the blockchain industry abreast of the latest technological developments. Here we provide a glimpse of the latest newsletter.https://www.binance.com/en/blog/396968522862759936/Binance-X-Newsletter-%7C-2nd-Issue …\",\n            \"icon\": null,\n            \"imgURL\": \"https://pbs.twimg.com/card_img/1191460108678483969/tG8h_oBH?format=jpg&name=600x314\",\n            \"description\": \"\",\n            \"link\": \"https://twitter.com/binance/status/1191460106354905088?utm_medium=Organic&utm_source=coinstats\",\n            \"sourceLink\": \"https://twitter.com/binance\",\n            \"reactionsCount\": {\n                \"2\": 3\n            },\n            \"shareURL\": \"https://coinstats.app/news/LshIY4iHUD_.Binancex-Newsletter--2nd-IssueBinance-X-the-developerfocused-division-of-Binance-regularly-releases-newsletters-to-keep-the-blockchain-industry-abreast-of-the-latest-technological-developments.-Here-we-provide-a-glimpse-of-the-latest-newsletter.httpswww.binance.comenblog396968522862759936BinanceXNewsletter7C2ndIssue\",\n            \"relatedCoins\": [],\n            \"content\": false,\n            \"coins\": []\n        },\n        {\n            \"id\": \"kSHle760oa\",\n            \"feedDate\": 1572925395000,\n            \"source\": \"CoinGape\",\n            \"title\": \"Stellar [XLM] Supply Cut by Half, but Market Capitalization Remains Same – Here’s Why\",\n            \"icon\": \"https://s3-us-west-2.amazonaws.com/coin-stats-news/sources/coingape.png\",\n            \"imgURL\": \"https://cdn.coingape.com/wp-content/uploads/2019/11/05091204/stellar-300x158.jpg\",\n            \"description\": \"The Stellar Development Foundation (SDF) announces a token burn of more than 50% of its total supply. The decision was made to improve the efficiency [...]\",\n            \"link\": \"https://coingape.com/stellar-xlm-coin-burn/?utm_medium=Organic&utm_source=coinstats\",\n            \"sourceLink\": \"https://coingape.com\",\n            \"reactionsCount\": {\n                \"2\": 2,\n                \"3\": 0,\n                \"4\": 1\n            },\n            \"shareURL\": \"https://coinstats.app/news/kSHle760oa_Stellar-XLM-Supply-Cut-by-Half-but-Market-Capitalization-Remains-Same--Heres-Why\",\n            \"relatedCoins\": [\n                \"stellar\",\n                \"cutcoin\",\n                \"bitup-token\"\n            ],\n            \"content\": false,\n            \"coins\": [\n                {\n                    \"coinKeyWords\": \"XLM\",\n                    \"coinPercent\": 15.32,\n                    \"coinTitleKeyWords\": \"XLM\",\n                    \"coinNameKeyWords\": \"Stellar\",\n                    \"coinIdKeyWords\": \"stellar\"\n                },\n                {\n                    \"coinKeyWords\": \"CUT\",\n                    \"coinPercent\": -4.15,\n                    \"coinTitleKeyWords\": \"CUT\",\n                    \"coinNameKeyWords\": \"CUTcoin\",\n                    \"coinIdKeyWords\": \"cutcoin\"\n                },\n                {\n                    \"coinKeyWords\": \"BUT\",\n                    \"coinPercent\": -3.38,\n                    \"coinTitleKeyWords\": \"BUT\",\n                    \"coinNameKeyWords\": \"BitUP Token\",\n                    \"coinIdKeyWords\": \"bitup-token\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_ROOT",
+			"value": "https://api.coinstats.app"
+		}
+	]
+}
